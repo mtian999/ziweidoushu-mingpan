@@ -2,8 +2,6 @@ import BaiDuAnalytics from "@/app/BaiDuAnalytics";
 import GoogleAnalytics from "@/app/GoogleAnalytics";
 import { TailwindIndicator } from "@/components/TailwindIndicator";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
 import { siteConfig } from "@/config/site";
 import { defaultLocale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -33,15 +31,15 @@ export const viewport: Viewport = {
   themeColor: siteConfig.themeColors,
 };
 
-export default async function RootLayout({
+export default async function Layout({
   children,
   params: { lang },
 }: {
   children: React.ReactNode;
-  params: { lang: string[] | undefined };
+  params: { lang: string | undefined };
 }) {
   return (
-    <html lang={(lang && lang[0]) || defaultLocale} suppressHydrationWarning>
+    <html lang={lang || defaultLocale} suppressHydrationWarning>
       <head />
       <body
         className={cn(
@@ -54,9 +52,8 @@ export default async function RootLayout({
           defaultTheme={siteConfig.nextThemeColor}
           enableSystem
         >
-          <Header />
           <main className="flex flex-col items-center py-6">{children}</main>
-          <Footer />
+
           <Analytics />
           <TailwindIndicator />
         </ThemeProvider>

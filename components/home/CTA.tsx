@@ -2,7 +2,15 @@
 import CTAButton from "@/components/home/CTAButton";
 import { RoughNotation } from "react-rough-notation";
 
-const CTA = ({ locale, CTALocale }: { locale: any; CTALocale: any }) => {
+const CTA = ({
+  locale,
+  CTALocale,
+  langName,
+}: {
+  locale: any;
+  CTALocale: any;
+  langName: string;
+}) => {
   return (
     <section className="flex flex-col justify-center max-w-[88%] items-center py-16 gap-12">
       <div className="flex flex-col text-center gap-4">
@@ -22,7 +30,7 @@ const CTA = ({ locale, CTALocale }: { locale: any; CTALocale: any }) => {
           {locale.description6}
         </p>
       </div>
-      <CTAButton locale={CTALocale} />
+      <CTAButton locale={CTALocale} langName={langName} />
     </section>
   );
 };

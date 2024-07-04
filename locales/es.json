@@ -1,42 +1,44 @@
 {
-  "Hero": {
-    "title1": "",
-    "title2": "Página de aterrizaje",
-    "title3": "construcción rápida"
-  },
-  "SocialProof": {
-    "maker": "creadores construyen rápido"
-  },
-  "Feature": {
-    "title": "Características"
-  },
-  "Pricing": {
-    "title": "Precios",
-    "title2": "Obtén acceso ilimitado.",
-    "description": "La página que estás viendo actualmente es un template gratuito y de código abierto.",
-    "doYouLike": "¿Te gusta este template para páginas de aterrizaje?",
-    "follow": "Sigue mi Twitter."
-  },
-  "WallOfLove": {
-    "title": "Muro del Amor",
-    "description1": "Si usas esta plantilla para página de aterrizaje y la recomiendas en tu Twitter,",
-    "description2": "por favor házmelo saber",
-    "description3": ". Exhibiré tu tweet y recomendación aquí."
+  "CTA": {
+    "title": "Genera tu carta astral personalizada de forma gratuita",
+    "description1": "¡Genera",
+    "description2": "una carta astral personalizada",
+    "description3": "",
+    "description4": "!",
+    "description5": "",
+    "description6": ""
   },
   "FAQ": {
-    "title": "Preguntas Frecuentes",
-    "description": "Aquí están algunas de las preguntas más frecuentes."
+    "title": "Preguntas frecuentes",
+    "description": "Aquí tienes algunas preguntas más frecuentes."
   },
-  "CTA": {
-    "title": "Construye tu página de aterrizaje ahora",
-    "description1": "Construye",
-    "description2": "tu página de aterrizaje,",
-    "description3": "muestra",
-    "description4": "tu producto, y",
-    "description5": "comienza a ganar",
-    "description6": "¡dinero!"
+  "Hero": {
+    "title1": "Explora tu estudio de los ocho caracteres",
+    "title2": "紫微斗数",
+    "title3": "Generación gratuita de cartas astrales",
+    "description": "Desde la antigüedad, la humanidad ha estado explorando los misterios del universo, tratando de encontrar el significado de la vida y la guía para el futuro. Ya sea la astrología, el tarot, la numerología o la quiromancia, cada método de adivinación ofrece una perspectiva única que nos ayuda a comprendernos a nosotros mismos y el mundo que nos rodea. Conoce tu trayectoria de vida, domina las tendencias futuras, genera tu carta astral de紫微斗数 de forma gratuita de inmediato."
   },
-  "CTAButton": {
-    "title": "Obtener Plantilla"
+  "Feature": { "title": "Funciones de la carta astral" },
+  "Pricing": {
+    "title": "Precios",
+    "follow": "",
+    "title2": "",
+    "doYouLike": "",
+    "description": "Actualmente solo ofrecemos el servicio gratuito de generación de cartas astrales de紫微斗数."
+  },
+  "CTAButton": { "title": "Generar" },
+  "WallOfLove": {
+    "title": "Muro del amor",
+    "description1": "Si utilizaste esta plantilla de página de destino y la recomendaste en Twitter, ",
+    "description2": "házmelo saber",
+    "description3": ", mostraré tu tweet y recomendación aquí."
+  },
+  "SocialProof": { "maker": "Desarrollado por creadores rápidos" },
+  "Metadata": {
+    "home": {
+      "title": "紫微斗数 | Generación gratuita de cartas astrales",
+      "keywords": ["紫微斗数", "紫 微 斗 数 2024", "紫 微 斗 数 無料 2024"],
+      "description": "紫微斗数2024, generación gratuita, construye un complejo sistema de cartas astrales para revelar la personalidad, destino y tendencias futuras de una persona."
+    }
   }
 }

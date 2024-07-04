@@ -75,10 +75,9 @@ const Pricing = ({
                 fullWidth
                 as={Link}
                 color={tier.buttonColor}
-                href={tier.href}
+                href={`/${langName}/fate`}
                 variant={tier.buttonVariant}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
+                // rel="noopener noreferrer nofollow"
               >
                 {tier.buttonText}
               </Button>

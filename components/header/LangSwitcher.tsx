@@ -15,8 +15,7 @@ export const LangSwitcher = () => {
   const lang = params.lang;
 
   // const lang = (params.lang && params.lang[0]) || defaultLocale;
-  let langName =
-    lang && lang[0] && lang[0] !== "index" ? lang[0] : defaultLocale;
+  let langName = lang !== "index" ? lang : defaultLocale;
   const router = useRouter();
 
   const handleSwitchLanguage = (value: string) => {

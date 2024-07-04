@@ -1,43 +1,48 @@
 {
-  "Hero": {
-    "title1": "Ship",
-    "title2": "Landing Page",
-    "title3": "Fast",
-    "description": "A free, open-source, and powerful landing page boilerplate, ideal for various projects, enabling you to create a landing page in under an hour."
-  },
-  "SocialProof": {
-    "maker": "makers ship fast"
-  },
-  "Feature": {
-    "title": "Features"
-  },
-  "Pricing": {
-    "title": "Pricing",
-    "title2": "Get unlimited access.",
-    "description": "The page you are currently viewing is an open-source, free boilerplate.",
-    "doYouLike": "Do you like this landing page boilerplate?",
-    "follow": "Follow my Twitter."
-  },
-  "WallOfLove": {
-    "title": "Wall of Love",
-    "description1": "If you use this landing page template and recommend it on your Twitter,",
-    "description2": "please let me know",
-    "description3": ". I will display your tweet and recommendation here."
+  "CTA": {
+    "title": "Generate your exclusive birth chart for free",
+    "description1": "Generate",
+    "description2": "Exclusive birth chart",
+    "description3": "",
+    "description4": "!",
+    "description5": "",
+    "description6": ""
   },
   "FAQ": {
     "title": "FAQs",
-    "description": "Here are some of the most frequently asked questions."
+    "description": "Here are some of the most common questions."
   },
-  "CTA": {
-    "title": "Build Your Landing Page Now",
-    "description1": "Build",
-    "description2": "your landing page,",
-    "description3": "show",
-    "description4": "your product, and",
-    "description5": "start earning",
-    "description6": "!"
+  "Hero": {
+    "title1": "Explore your Ba Zi destiny analysis",
+    "title2": "Zi Wei Dou Shu",
+    "title3": "Free birth chart generation",
+    "description": "Since ancient times, humanity has been exploring the mysteries of the universe, seeking to find meaning in life and guidance for the future. Whether it's astrology, tarot cards, numerology, or palmistry, each divination method offers a unique perspective to help us understand ourselves and the world around us. Understand your life path, grasp future trends, generate your Zi Wei Dou Shu birth chart for free now."
   },
-  "CTAButton": {
-    "title": "Get Boilerplate"
+  "Feature": { "title": "Functions of birth charts" },
+  "Pricing": {
+    "title": "Pricing",
+    "follow": "",
+    "title2": "",
+    "doYouLike": "",
+    "description": "Currently, we only provide free Zi Wei Dou Shu birth chart generation service."
+  },
+  "CTAButton": { "title": "Generate" },
+  "WallOfLove": {
+    "title": "Wall of Love",
+    "description1": "If you use this landing page template and recommend it on Twitter,",
+    "description2": "please let me know",
+    "description3": ", I will display your tweet and recommendation here."
+  },
+  "SocialProof": { "maker": "Quickly developed by the creator" },
+  "Metadata": {
+    "home": {
+      "title": "Zi Wei Dou Shu | Free birth chart generation",
+      "keywords": [
+        "Zi Wei Dou Shu",
+        "Zi Wei Dou Shu 2024",
+        "Zi Wei Dou Shu Free 2024"
+      ],
+      "description": "Zi Wei Dou Shu 2024, free generation, constructing a complex star chart system to reveal individual personality, destiny, and future trends."
+    }
   }
 }

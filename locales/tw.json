@@ -1,0 +1,41 @@
+{
+  "CTA": {
+    "title": "免費生成您的專屬命盤",
+    "description1": "生成",
+    "description2": "專屬命盤",
+    "description3": "",
+    "description4": "！",
+    "description5": "",
+    "description6": ""
+  },
+  "FAQ": { "title": "FAQs", "description": "這裡有一些最常見的問題。" },
+  "Hero": {
+    "title1": "探索你的八字命學",
+    "title2": "紫微斗數",
+    "title3": "免費命盤生成",
+    "description": "自古以來，人類一直在探索宇宙的奧秘，嘗試從中尋找生命的意義和未來的指引。無論是占星術、塔羅牌、數字學還是手相術，每一種占卜方法都提供了一種獨特的視角，幫助我們理解自己和周圍的世界。了解你的人生軌跡，掌握未來趨勢，立即免費生成你的紫微斗數命盤。"
+  },
+  "Feature": { "title": "命盤的作用" },
+  "Pricing": {
+    "title": "定價",
+    "follow": "",
+    "title2": "",
+    "doYouLike": "",
+    "description": "目前只提供免費的紫微斗數命盤生成服務"
+  },
+  "CTAButton": { "title": "生成" },
+  "WallOfLove": {
+    "title": "Wall of Love",
+    "description1": "如果你使用這個落地頁模板並在推特上推薦了，",
+    "description2": "請告訴我",
+    "description3": "，我會在這裡展示你的推文和推薦。"
+  },
+  "SocialProof": { "maker": "製作者快速開發" },
+  "Metadata": {
+    "home": {
+      "title": "紫微斗數 | 免費生成命盤",
+      "keywords": ["紫微斗數", "紫 微 斗 數 2024", "紫 微 斗 數 免費 2024"],
+      "description": "紫微斗數2024，免費生成，構建一個複雜的星盤系統，從而揭示個人的性格、命運和未來趨勢。"
+    }
+  }
+}

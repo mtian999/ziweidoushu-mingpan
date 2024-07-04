@@ -45,34 +45,29 @@ export const FEATURES_EN = [
 
 export const FEATURES_ZH = [
   {
-    title: "开源优势",
-    content: "完全免费，提供丰富的自定义选项。",
+    title: "性格推演",
+    content: "通过十二宫位全方位分析，揭示您多面立体的个性特征。",
     icon: BsGithub,
   },
   {
-    title: "响应式设计",
-    content: "精心设计的模板，确保在任何设备上都能优化显示。",
+    title: "子女教育",
+    content: "了解孩子在不同环境下的个性表现，实现因材施教。",
     icon: FaMobileScreenButton,
   },
   {
-    title: "易于定制",
-    content: "轻松更改颜色、字体和布局，无需任何编码知识。",
+    title: "职业规划",
+    content: "为职业选择和未来发展提供参考，助您未雨绸缪。",
     icon: FaToolbox,
   },
   {
-    title: "SEO优化",
-    content: "构建模板时考虑到搜索引擎优化，增强网站的可发现性。",
+    title: "社交谈资",
+    content: "作为社交工具，快速拉近人与人之间的距离。",
     icon: MagnetIcon,
   },
   {
-    title: "一键部署",
-    content: "与领先的网站托管服务紧密集成，实现即时网站发布。",
+    title: "择偶参考",
+    content: "通过星盘组合，了解对方个性和喜好，为相处提供参考。",
     icon: MdCloudUpload,
-  },
-  {
-    title: "全球化支持",
-    content: "支持多种语言，让你的网站吸引全球受众。",
-    icon: FaEarthAsia,
   },
 ];
 
@@ -84,7 +79,8 @@ export const FEATURES_JA = [
   },
   {
     title: "レスポンシブデザイン",
-    content: "どのデバイス上でも最適に表示されるように細心のデザインを施したテンプレート。",
+    content:
+      "どのデバイス上でも最適に表示されるように細心のデザインを施したテンプレート。",
     icon: FaMobileScreenButton,
   },
   {
@@ -94,12 +90,14 @@ export const FEATURES_JA = [
   },
   {
     title: "SEO最適化",
-    content: "ウェブサイトの発見可能性を高めるために、検索エンジン最適化を念頭に置いて構築されたテンプレート。",
+    content:
+      "ウェブサイトの発見可能性を高めるために、検索エンジン最適化を念頭に置いて構築されたテンプレート。",
     icon: MagnetIcon,
   },
   {
     title: "ワンクリックデプロイメント",
-    content: "主要なウェブホスティングサービスと密接に統合し、即時にウェブサイトを公開。",
+    content:
+      "主要なウェブホスティングサービスと密接に統合し、即時にウェブサイトを公開。",
     icon: MdCloudUpload,
   },
   {
@@ -122,17 +120,20 @@ export const FEATURES_AR = [
   },
   {
     title: "تخصيص سهل",
-    content: "غير الألوان والخطوط والتخطيطات بسهولة دون الحاجة إلى معرفة بالبرمجة.",
+    content:
+      "غير الألوان والخطوط والتخطيطات بسهولة دون الحاجة إلى معرفة بالبرمجة.",
     icon: FaToolbox,
   },
   {
     title: "مُحسّن لمحركات البحث",
-    content: "تم بناء القوالب مع مراعاة تحسين محركات البحث لتعزيز قابلية اكتشاف موقعك.",
+    content:
+      "تم بناء القوالب مع مراعاة تحسين محركات البحث لتعزيز قابلية اكتشاف موقعك.",
     icon: MagnetIcon,
   },
   {
     title: "نشر بنقرة واحدة",
-    content: "متكاملة بشكل وثيق مع خدمات استضافة الويب الرائدة لنشر الموقع فوراً.",
+    content:
+      "متكاملة بشكل وثيق مع خدمات استضافة الويب الرائدة لنشر الموقع فوراً.",
     icon: MdCloudUpload,
   },
   {
@@ -145,32 +146,38 @@ export const FEATURES_AR = [
 export const FEATURES_ES = [
   {
     title: "Ventaja del Código Abierto",
-    content: "Completamente gratuito con una riqueza de opciones de personalización.",
+    content:
+      "Completamente gratuito con una riqueza de opciones de personalización.",
     icon: BsGithub,
   },
   {
     title: "Diseño Responsivo",
-    content: "Plantillas diseñadas meticulosamente para garantizar una visualización óptima en cualquier dispositivo.",
+    content:
+      "Plantillas diseñadas meticulosamente para garantizar una visualización óptima en cualquier dispositivo.",
     icon: FaMobileScreenButton,
   },
   {
     title: "Personalización Fácil",
-    content: "Cambia colores, fuentes y diseños sin esfuerzo y sin necesidad de conocimientos de codificación.",
+    content:
+      "Cambia colores, fuentes y diseños sin esfuerzo y sin necesidad de conocimientos de codificación.",
     icon: FaToolbox,
   },
   {
     title: "Optimizado para SEO",
-    content: "Plantillas construidas con la optimización de motores de búsqueda en mente para mejorar la descubribilidad de tu sitio web.",
+    content:
+      "Plantillas construidas con la optimización de motores de búsqueda en mente para mejorar la descubribilidad de tu sitio web.",
     icon: MagnetIcon,
   },
   {
     title: "Despliegue con Un Clic",
-    content: "Integrado estrechamente con servicios líderes de alojamiento web para la publicación instantánea del sitio web.",
+    content:
+      "Integrado estrechamente con servicios líderes de alojamiento web para la publicación instantánea del sitio web.",
     icon: MdCloudUpload,
   },
   {
     title: "Soporte de Globalización",
-    content: "Soporta múltiples idiomas, haciendo tu sitio web atractivo para una audiencia global.",
+    content:
+      "Soporta múltiples idiomas, haciendo tu sitio web atractivo para una audiencia global.",
     icon: FaEarthAsia,
   },
 ];
@@ -183,27 +190,32 @@ export const FEATURES_RU = [
   },
   {
     title: "Адаптивный Дизайн",
-    content: "Шаблоны, тщательно разработанные для обеспечения оптимального отображения на любом устройстве.",
+    content:
+      "Шаблоны, тщательно разработанные для обеспечения оптимального отображения на любом устройстве.",
     icon: FaMobileScreenButton,
   },
   {
     title: "Легкая Настройка",
-    content: "Легко изменяйте цвета, шрифты и макеты без знаний в области программирования.",
+    content:
+      "Легко изменяйте цвета, шрифты и макеты без знаний в области программирования.",
     icon: FaToolbox,
   },
   {
     title: "Оптимизировано для Поисковых Систем",
-    content: "Шаблоны созданы с учетом оптимизации для поисковых систем, чтобы повысить обнаруживаемость вашего сайта.",
+    content:
+      "Шаблоны созданы с учетом оптимизации для поисковых систем, чтобы повысить обнаруживаемость вашего сайта.",
     icon: MagnetIcon,
   },
   {
     title: "Развертывание в Один Клик",
-    content: "Плотно интегрировано с ведущими сервисами веб-хостинга для мгновенной публикации сайта.",
+    content:
+      "Плотно интегрировано с ведущими сервисами веб-хостинга для мгновенной публикации сайта.",
     icon: MdCloudUpload,
   },
   {
     title: "Поддержка Глобализации",
-    content: "Поддерживает несколько языков, делая ваш сайт привлекательным для мировой аудитории.",
+    content:
+      "Поддерживает несколько языков, делая ваш сайт привлекательным для мировой аудитории.",
     icon: FaEarthAsia,
   },
 ];
@@ -222,5 +234,5 @@ export const ALL_FEATURES: FeaturesCollection = {
   FEATURES_JA,
   FEATURES_AR,
   FEATURES_ES,
-  FEATURES_RU
-}
+  FEATURES_RU,
+};

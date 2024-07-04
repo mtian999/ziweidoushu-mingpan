@@ -1,22 +1,29 @@
 {
+  "Metadata": {
+    "home": {
+      "title": "紫微斗数 | 免费生成命盘",
+      "description": "紫微斗数2024，免费生成，构建一个复杂的星盘系统，从而揭示个人的性格、命运和未来趋势。",
+      "keywords": ["紫微斗数", "紫 微 斗 数 2024", "紫 微 斗 数 無料 2024"]
+    }
+  },
   "Hero": {
-    "title1": "快速构建",
-    "title2": "落地页",
-    "title3": "",
-    "description": "一个免费、开源且强大的落地页模板，适用于各种项目，让你在一个小时内搭建落地页。"
+    "title1": "探索你的八字命学",
+    "title2": "紫微斗数",
+    "title3": "免费命盘生成",
+    "description": "自古以来，人类一直在探索宇宙的奥秘，试图从中寻找生命的意义和未来的指引。无论是占星术、塔罗牌、数字学还是手相术，每一种占卜方法都提供了一种独特的视角，帮助我们理解自己和周围的世界。了解你的人生轨迹，掌握未来趋势，立即免费生成你的紫微斗数命盘。"
   },
   "SocialProof": {
     "maker": "制作者快速开发"
   },
   "Feature": {
-    "title": "Feature"
+    "title": "命盘的作用"
   },
   "Pricing": {
     "title": "定价",
-    "title2": "拥有无限访问权限",
-    "description": "你当前查看的页面是一个开源的、免费的模板。",
-    "doYouLike": "你喜欢这个落地页模板吗？",
-    "follow": "关注我的推特。"
+    "title2": "",
+    "description": "目前只提供免费的紫微斗数命盘生成服务",
+    "doYouLike": "",
+    "follow": ""
   },
   "WallOfLove": {
     "title": "Wall of Love",
@@ -29,15 +36,15 @@
     "description": "这里有一些最常见的问题。"
   },
   "CTA": {
-    "title": "立即构建你的落地页",
-    "description1": "构建",
-    "description2": "你的落地页，",
-    "description3": "展示",
-    "description4": "你的产品，并开始",
-    "description5": "赚取收入",
-    "description6": "！"
+    "title": "免费生成您的专属命盘",
+    "description1": "生成",
+    "description2": "专属命盘",
+    "description3": "",
+    "description4": "！",
+    "description5": "",
+    "description6": ""
   },
   "CTAButton": {
-    "title": "获取模板"
+    "title": "生成"
   }
 }

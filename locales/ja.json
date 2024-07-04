@@ -1,43 +1,50 @@
 {
+  "Metadata": {
+    "home": {
+      "title": "紫微斗数 | 無料の命盤生成",
+      "description": "2024年の紫微斗数、無料で生成。複雑な星図システムを構築し、個人の性格、運命、未来のトレンドを明らかにします。",
+      "keywords": ["紫微斗数", "2024年の紫微斗数", "無料で2024年の紫微斗数"]
+    }
+  },
   "Hero": {
-    "title1": "",
-    "title2": "ランディングページ",
-    "title3": "迅速に構築",
-    "description": "無料でオープンソースかつ強力なランディングページのテンプレート。さまざまなプロジェクトに理想的で、1時間以内にランディングページを作成できます。"
+    "title1": "あなたの八字命学を探求する",
+    "title2": "紫微斗数",
+    "title3": "無料の命盤生成",
+    "description": "昔から人間は宇宙の神秘を探求しており、そこから生命の意味と未来の導きを求めてきました。占星術、タロットカード、数字学、手相学など、各占い方法は、私たちが自分自身と周りの世界を理解するのに役立つ一意の視点を提供しています。あなたの人生の軌跡を理解し、未来のトレンドを把握し、今すぐ無料であなたの紫微斗数命盤を生成してください。"
   },
   "SocialProof": {
-    "maker": "開発者が迅速に出荷"
+    "maker": "クリエイターによる迅速な開発"
   },
   "Feature": {
-    "title": "Feature"
+    "title": "命盤の役割"
   },
   "Pricing": {
-    "title": "価格設定",
-    "title2": "無制限アクセスを取得。",
-    "description": "現在閲覧中のページは、オープンソースで無料のテンプレートです。",
-    "doYouLike": "このランディングページのテンプレートは気に入りましたか？",
-    "follow": "私のTwitterをフォローしてください。"
+    "title": "価格",
+    "title2": "",
+    "description": "現在、無料で紫微斗数命盤生成サービスのみを提供しています",
+    "doYouLike": "",
+    "follow": ""
   },
   "WallOfLove": {
-    "title": "WallOfLove",
-    "description1": "このランディングページテンプレートを使用してTwitterで推奨した場合、",
-    "description2": "私に知らせてください",
-    "description3": "。あなたのツイートと推薦をここに表示します。"
+    "title": "愛の壁",
+    "description1": "このランディングページテンプレートを使用して、Twitterで推薦した場合、",
+    "description2": "教えてください",
+    "description3": "、あなたのツイートと推薦をここで表示します。"
   },
   "FAQ": {
-    "title": "FAQs",
-    "description": "最も頻繁に尋ねられる質問はこちらです。"
+    "title": "よくある質問",
+    "description": "ここには最も一般的な質問があります。"
   },
   "CTA": {
-    "title": "今すぐあなたのランディングページを構築",
-    "description1": "あなたのランディングページを",
-    "description2": "構築し、",
-    "description3": "あなたの製品を",
-    "description4": "紹介し、そして",
-    "description5": "収益を得始めましょう",
-    "description6": "！"
+    "title": "無料であなたの専用命盤を生成",
+    "description1": "生成",
+    "description2": "専用命盤",
+    "description3": "",
+    "description4": "！",
+    "description5": "",
+    "description6": ""
   },
   "CTAButton": {
-    "title": "テンプレートを入手"
+    "title": "生成"
   }
 }

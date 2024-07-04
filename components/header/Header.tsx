@@ -18,10 +18,10 @@ const links = [
     label: "Pricing",
     href: "#Pricing",
   },
-  {
-    label: "Wall of Love",
-    href: "#WallOfLove",
-  },
+  // {
+  //   label: "Wall of Love",
+  //   href: "#WallOfLove",
+  // },
   {
     label: "FAQ",
     href: "#FAQ",
@@ -36,8 +36,8 @@ const Header = () => {
         <div className="flex items-center md:gap-x-12">
           <Link
             href="/"
-            aria-label="Landing Page Boilerplate"
-            title="Landing Page Boilerplate"
+            aria-label="紫微斗数"
+            title="紫微斗数"
             className="flex items-center space-x-1 font-bold"
           >
             <Image
@@ -48,7 +48,7 @@ const Header = () => {
               height={32}
             />
             <span className="text-gray-950 dark:text-gray-300 hidden md:block">
-              Landing Page Boilerplate
+              紫微斗数
             </span>
           </Link>
         </div>
@@ -90,8 +90,8 @@ const Header = () => {
                   <div>
                     <Link
                       href="/"
-                      aria-label="Landing Page Boilerplate"
-                      title="Landing Page Boilerplate"
+                      aria-label="紫微斗数"
+                      title="紫微斗数"
                       className="inline-flex items-center"
                     >
                       <Image

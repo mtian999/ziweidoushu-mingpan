@@ -1,4 +1,3 @@
-
 import { siteConfig } from "@/config/site";
 import { Tier, TiersEnum } from "@/types/pricing";
 
@@ -42,15 +41,15 @@ export const TIERS_EN: Array<Tier> = [
 export const TIERS_ZH: Array<Tier> = [
   {
     key: TiersEnum.Free,
-    title: "开源 / 免费",
+    title: "免费",
     price: "免费",
     href: siteConfig.openSourceURL || "#",
-    description: "可从GitHub仓库免费克隆落地页模板。",
+    description: "我们提供完全免费的紫微斗数命盘生成服务",
     features: [
       "免费",
-      "访问全部代码",
-      "二次开发",
-      "MIT 许可证",
+      // "访问全部代码",
+      // "二次开发",
+      // "MIT 许可证",
     ],
     buttonText: "开始",
     buttonColor: "primary",
@@ -60,16 +59,10 @@ export const TIERS_ZH: Array<Tier> = [
     key: TiersEnum.Customize,
     title: "定制",
     href: siteConfig.authors[0].twitter || "#",
-    description: "支付定制专属落地页。",
-    price: "$188",
-    features: [
-      "访问全部代码",
-      "二次开发",
-      "独家风格",
-      "一对一服务",
-      "更精致的页面",
-    ],
-    buttonText: "联系我们",
+    description: "施工中...",
+    price: "$998",
+    features: ["施工中..."],
+    buttonText: "敬请期待",
     buttonColor: "default",
     buttonVariant: "flat",
   },
@@ -81,13 +74,9 @@ export const TIERS_JA: Array<Tier> = [
     title: "オープンソース / 無料",
     price: "無料",
     href: siteConfig.openSourceURL || "#",
-    description: "GitHubリポジトリからランディングページのボイラープレートを自由にクローンできます。",
-    features: [
-      "無料",
-      "全コードへのアクセス",
-      "二次開発",
-      "MITライセンス",
-    ],
+    description:
+      "GitHubリポジトリからランディングページのボイラープレートを自由にクローンできます。",
+    features: ["無料", "全コードへのアクセス", "二次開発", "MITライセンス"],
     buttonText: "始める",
     buttonColor: "primary",
     buttonVariant: "solid",
@@ -118,12 +107,7 @@ export const TIERS_AR: Array<Tier> = [
     price: "مجاناً",
     href: siteConfig.openSourceURL || "#",
     description: "يمكنك نسخ قالب صفحة الهبوط من مستودع GitHub بحرية.",
-    features: [
-      "مجاني",
-      "الوصول إلى كامل الكود",
-      "التطوير الثانوي",
-      "رخصة MIT",
-    ],
+    features: ["مجاني", "الوصول إلى كامل الكود", "التطوير الثانوي", "رخصة MIT"],
     buttonText: "ابدأ الآن",
     buttonColor: "primary",
     buttonVariant: "solid",
@@ -231,5 +215,5 @@ export const ALL_TIERS: TiersCollection = {
   TIERS_JA,
   TIERS_AR,
   TIERS_ES,
-  TIERS_RU
-}
+  TIERS_RU,
+};
