@@ -1,14 +1,14 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { Izpalace } from "../Izpalace/Izpalace";
-import { IztrolabeProps } from "./Iztrolabe.type";
-import { IzpalaceCenter } from "../IzpalaceCenter";
+import { useIztro } from "@/lib/hooks/iztro-hook";
 import classNames from "classnames";
-import { useIztro } from "iztro-hook";
-import "./Iztrolabe.css";
-import "../theme/default.css";
+import { getPalaceNames } from "iztro/lib/astro";
 import { Scope } from "iztro/lib/data/types";
 import { HeavenlyStemKey } from "iztro/lib/i18n";
-import { getPalaceNames } from "iztro/lib/astro";
+import React, { useEffect, useMemo, useState } from "react";
+import { Izpalace } from "../Izpalace/Izpalace";
+import { IzpalaceCenter } from "../IzpalaceCenter";
+import "../theme/default.css";
+import "./Iztrolabe.css";
+import { IztrolabeProps } from "./Iztrolabe.type";
 
 export const Iztrolabe: React.FC<IztrolabeProps> = (props) => {
   const [taichiPoint, setTaichiPoint] = useState(-1);

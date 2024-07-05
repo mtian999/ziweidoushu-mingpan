@@ -24,6 +24,18 @@ export const localeNames: any = {
   es: "🇪🇸 Español",
   ru: "🇷🇺 Русский",
 };
+export type LocalesDict = {
+  [key: string]: string; // 使用索引签名来表示键值对
+};
+export const localesDict: LocalesDict = {
+  en: "en-US",
+  zh: "zh-CN",
+  tw: "zh-TW",
+  ja: "ja-JP",
+  ar: "en-US",
+  es: "en-US",
+  ru: "en-US",
+};
 export const defaultLocale = "en";
 
 // If you wish to automatically redirect users to a URL that matches their browser's language setting,

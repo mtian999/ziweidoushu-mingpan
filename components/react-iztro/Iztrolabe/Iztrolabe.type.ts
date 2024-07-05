@@ -1,4 +1,4 @@
-import { IztroInput } from "iztro-hook/lib/index.type";
+import { IztroInput } from "@/lib/hooks/iztro-hook/lib/index.type";
 import { NestedProps } from "../config/types";
 
 export type IztrolabeProps = {

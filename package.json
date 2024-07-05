@@ -15,10 +15,15 @@
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@vercel/analytics": "^1.1.2",
+    "antd": "^5.19.0",
     "class-variance-authority": "^0.7.0",
+    "classnames": "^2.3.2",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.14",
+    "html-to-image": "^1.11.11",
+    "iztro": "^2.4.3",
     "lucide-react": "^0.316.0",
+    "lunar-lite": "^0.2.3",
     "negotiator": "^0.6.3",
     "next": "14.1.0",
     "next-intl": "3.10.0",
@@ -30,11 +35,7 @@
     "react-icons": "^5.0.1",
     "react-rough-notation": "^1.0.5",
     "tailwind-merge": "^2.2.1",
-    "tailwindcss-animate": "^1.0.7",
-    "iztro": "^2.4.3",
-    "iztro-hook": "1.2.18",
-    "classnames": "^2.3.2",
-    "lunar-lite": "^0.2.3"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/negotiator": "^0.6.3",
