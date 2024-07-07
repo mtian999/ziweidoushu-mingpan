@@ -8,7 +8,6 @@ const LangLinks = () => {
   const params = useParams();
   const pathname = usePathname();
   const lang = params.lang;
-  console.log("lang", lang, pathname);
   const reg = new RegExp(`${lang}`);
   // const newPath = pathname.replace(reg, value);
   return (
