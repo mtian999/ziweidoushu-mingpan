@@ -1,4 +1,4 @@
-import { locales } from "./lib/i18n";
+import { defaultLocale, locales } from "./lib/i18n";
 
 import { NextRequest } from "next/server";
 
@@ -11,7 +11,7 @@ export function middleware(request: NextRequest) {
 
   if (isExit) return;
 
-  request.nextUrl.pathname = `/`;
+  request.nextUrl.pathname = `/${defaultLocale}/${request.nextUrl.pathname}`;
   return Response.redirect(request.nextUrl);
 }
 
