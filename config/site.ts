@@ -5,15 +5,15 @@ const OPEN_SOURCE_URL = "https://github.com/weijunext/landing-page-boilerplate";
 const baseSiteConfig = {
   name: "紫微斗数 | 免费生成命盘",
   description:
-    "A free, open-source, and powerful landing page boilerplate, ideal for various projects, enabling you to create a landing page in under an hour.",
-  url: "https://landingpage.weijunext.com",
+    "The hottest divination methods of 2024: Chinese Astrology 2024, Destiny Studies 2024, Tarot 2024, Palmistry 2024. Here is Chinese Astrology 2024, free to generate a life chart, build a complex destiny chart system to reveal one's personality, destiny, and future trends.",
+  url: "https://fate.maomaoyu.coffee",
   ogImage: "https://landingpage.weijunext.com/og.png",
   metadataBase: "/",
   keywords: [
-    "landing page boilerplate",
-    "landing page template",
-    "awesome landing page",
-    "next.js landing page",
+    "different methods of divination",
+    "Zi Wei Dou Shu",
+    "Zi Wei Dou Shu 2024",
+    "Zi Wei Dou Shu Free 2024",
   ],
   authors: [
     {
@@ -22,8 +22,8 @@ const baseSiteConfig = {
       twitter: "",
     },
   ],
-  creator: "@weijunext",
-  openSourceURL: "https://github.com/weijunext/landing-page-boilerplate",
+  creator: "maomaoyu",
+  openSourceURL: "",
   themeColors: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
