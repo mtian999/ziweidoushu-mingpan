@@ -1,8 +1,21 @@
 {
+  "Fate": {
+    "description": "Enter information and click the `Generate` button to get your exclusive star chart",
+    "form": {
+      "birthday": "Birthday",
+      "birthTime": "Birth Time",
+      "gender": "Gender",
+      "create": "Generate",
+      "download": "Download"
+    }
+  },
+  "Header": {
+    "title": "Zi Wei Dou Shu"
+  },
   "CTA": {
-    "title": "Generate your exclusive birth chart for free",
+    "title": "Generate a free personalized destiny chart",
     "description1": "Generate",
-    "description2": "Exclusive birth chart",
+    "description2": "Exclusive destiny chart",
     "description3": "",
     "description4": "!",
     "description5": "",
@@ -15,16 +28,16 @@
   "Hero": {
     "title1": "Explore your Ba Zi destiny analysis",
     "title2": "Zi Wei Dou Shu",
-    "title3": "Free birth chart generation",
-    "description": "Since ancient times, humanity has been exploring the mysteries of the universe, seeking to find meaning in life and guidance for the future. Whether it's astrology, tarot cards, numerology, or palmistry, each divination method offers a unique perspective to help us understand ourselves and the world around us. Understand your life path, grasp future trends, generate your Zi Wei Dou Shu birth chart for free now."
+    "title3": "Free destiny chart generation",
+    "description": "Since ancient times, humanity has been exploring the mysteries of the universe, seeking to find meaning in life and guidance for the future. Whether it's astrology, tarot cards, numerology, or palmistry, each divination method offers a unique perspective to help us understand ourselves and the world around us. Understand your life path, grasp future trends, generate your Zi Wei Dou Shu destiny chart for free now."
   },
-  "Feature": { "title": "Functions of birth charts" },
+  "Feature": { "title": "Functions of destiny chart" },
   "Pricing": {
     "title": "Pricing",
     "follow": "",
     "title2": "",
     "doYouLike": "",
-    "description": "Currently, we only provide free Zi Wei Dou Shu birth chart generation service."
+    "description": "Currently, we only provide free Zi Wei Dou Shu destiny chart generation service."
   },
   "CTAButton": { "title": "Generate" },
   "WallOfLove": {
@@ -36,13 +49,13 @@
   "SocialProof": { "maker": "Quickly developed by the creator" },
   "Metadata": {
     "home": {
-      "title": "Zi Wei Dou Shu | Free birth chart generation",
+      "title": "Zi Wei Dou Shu | Free destiny chart generation",
       "keywords": [
         "Zi Wei Dou Shu",
         "Zi Wei Dou Shu 2024",
         "Zi Wei Dou Shu Free 2024"
       ],
-      "description": "Zi Wei Dou Shu 2024, free generation, constructing a complex star chart system to reveal individual personality, destiny, and future trends."
+      "description": "2024 Numerology, Tarot 2024 , Palmistry 2024, Prateek Palmistry. This is Zi Wei Dou Shu 2024, free generation, Establish an intricate fortune-telling system, destiny, and future trends."
     }
   }
 }

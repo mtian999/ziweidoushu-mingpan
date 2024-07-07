@@ -1,7 +1,6 @@
 "use client";
 import HeaderLinks from "@/components/header/HeaderLinks";
 import { LangSwitcher } from "@/components/header/LangSwitcher";
-import { siteConfig } from "@/config/site";
 import { MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,26 +8,12 @@ import { useState } from "react";
 import { CgClose } from "react-icons/cg";
 import { ThemedButton } from "../ThemedButton";
 
-const links = [
-  {
-    label: "Features",
-    href: "#Features",
-  },
-  {
-    label: "Pricing",
-    href: "#Pricing",
-  },
-  // {
-  //   label: "Wall of Love",
-  //   href: "#WallOfLove",
-  // },
-  {
-    label: "FAQ",
-    href: "#FAQ",
-  },
-];
+interface Link {
+  label: string;
+  href: string;
+}
 
-const Header = () => {
+const Header = ({ locale, links = [] }: { locale: any; links?: Link[] }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <header className="py-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -36,19 +21,19 @@ const Header = () => {
         <div className="flex items-center md:gap-x-12">
           <Link
             href="/"
-            aria-label="紫微斗数"
-            title="紫微斗数"
+            aria-label={locale.title}
+            title={locale.title}
             className="flex items-center space-x-1 font-bold"
           >
             <Image
-              alt={siteConfig.name}
-              src="/logo.svg"
+              alt={locale.title}
+              src="/logo.png"
               className="w-8 h-8"
               width={32}
               height={32}
             />
             <span className="text-gray-950 dark:text-gray-300 hidden md:block">
-              紫微斗数
+              {locale.title}
             </span>
           </Link>
         </div>
@@ -90,13 +75,13 @@ const Header = () => {
                   <div>
                     <Link
                       href="/"
-                      aria-label="紫微斗数"
-                      title="紫微斗数"
+                      aria-label={locale.title}
+                      title={locale.title}
                       className="inline-flex items-center"
                     >
                       <Image
-                        alt={siteConfig.name}
-                        src="/logo.svg"
+                        alt={locale.title}
+                        src="/logo.png"
                         className="w-8 h-8"
                         width={32}
                         height={32}

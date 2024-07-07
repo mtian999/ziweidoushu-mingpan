@@ -2,44 +2,38 @@ import { LucideIcon, MagnetIcon } from "lucide-react";
 import { IconType } from "react-icons";
 import { BsGithub } from "react-icons/bs";
 import { FaToolbox } from "react-icons/fa";
-import { FaEarthAsia, FaMobileScreenButton } from "react-icons/fa6";
+import { FaMobileScreenButton } from "react-icons/fa6";
 import { MdCloudUpload } from "react-icons/md";
 
 export const FEATURES_EN = [
   {
-    title: "Open Source Advantage",
-    content: "Completely free with a wealth of customization options.",
+    title: "Personality Profiling",
+    content:
+      "A comprehensive analysis of the twelve houses to reveal your multifaceted personality traits.",
     icon: BsGithub,
   },
   {
-    title: "Responsive Design",
+    title: "Child Education",
     content:
-      "Templates meticulously designed to ensure optimal display on any device.",
+      "Understand how a child's personality manifests in different environments to achieve education tailored to the individual.",
     icon: FaMobileScreenButton,
   },
   {
-    title: "Easy Customization",
+    title: "Career Planning",
     content:
-      "Effortlessly change colors, fonts, and layouts without any coding knowledge.",
+      "Provide guidance for career choices and future development, helping you to be prepared for the future.",
     icon: FaToolbox,
   },
   {
-    title: "SEO Optimized",
-    content:
-      "Templates built with search engine optimization in mind to enhance your website's discoverability.",
+    title: "Social Conversation",
+    content: "As a social tool, quickly narrow the distance between people.",
     icon: MagnetIcon,
   },
   {
-    title: "One-Click Deployment",
+    title: "Partner Selection",
     content:
-      "Tightly integrated with leading web hosting services for instant website publishing.",
+      "Understand the personality and preferences of the other party through the combination of astrological destiny charts, providing a reference for getting along.",
     icon: MdCloudUpload,
-  },
-  {
-    title: "Globalization Support",
-    content:
-      "Supports multiple languages, making your website attractive to a global audience.",
-    icon: FaEarthAsia,
   },
 ];
 
@@ -71,152 +65,160 @@ export const FEATURES_ZH = [
   },
 ];
 
-export const FEATURES_JA = [
+export const FEATURES_TW = [
   {
-    title: "オープンソースの利点",
-    content: "完全無料で、豊富なカスタマイズオプションを提供。",
+    title: "個性推演",
+    content: "透過十二宮位全方位分析，揭示您多面立體的個性特徵。",
     icon: BsGithub,
   },
   {
-    title: "レスポンシブデザイン",
-    content:
-      "どのデバイス上でも最適に表示されるように細心のデザインを施したテンプレート。",
+    title: "子女教育",
+    content: "了解孩子在不同環境下個性表現，實現因材施教。",
     icon: FaMobileScreenButton,
   },
   {
-    title: "簡単カスタマイズ",
-    content: "色、フォント、レイアウトをコーディング知識なしで簡単に変更可能。",
+    title: "職業規劃",
+    content: "為職業選擇和未來發展提供參考，助您未雨綢繆。",
     icon: FaToolbox,
   },
   {
-    title: "SEO最適化",
-    content:
-      "ウェブサイトの発見可能性を高めるために、検索エンジン最適化を念頭に置いて構築されたテンプレート。",
+    title: "社交談資",
+    content: "作為社交工具，快速拉近人與人之間的距離。",
     icon: MagnetIcon,
   },
   {
-    title: "ワンクリックデプロイメント",
-    content:
-      "主要なウェブホスティングサービスと密接に統合し、即時にウェブサイトを公開。",
+    title: "擇偶參考",
+    content: "透過星盤組合，了解對方個性和喜好，為相處提供參考。",
     icon: MdCloudUpload,
   },
+];
+
+export const FEATURES_JA = [
   {
-    title: "グローバリゼーションサポート",
-    content: "複数言語をサポートし、グローバルな視聴者を魅了するウェブサイト。",
-    icon: FaEarthAsia,
+    title: "性格推演",
+    content:
+      "十二の宮位を全方位に分析し、あなたの多面的な個性の特徴を明らかにします。",
+    icon: BsGithub,
+  },
+  {
+    title: "子女教育",
+    content:
+      "子供が異なる環境下での個性的な行動を理解し、材質に応じた教育を実現します。",
+    icon: FaMobileScreenButton,
+  },
+  {
+    title: "职业规划",
+    content:
+      "職業の選択と将来の発展に参考を提供し、事前に計画を立てることを手助けします。",
+    icon: FaToolbox,
+  },
+  {
+    title: "社交谈资",
+    content: "社交ツールとして、人々の間の距離を迅速に縮めることができます。",
+    icon: MagnetIcon,
+  },
+  {
+    title: "择偶参考",
+    content:
+      "星座の組み合わせを通じて、相手の個性と好みを理解し、付き合いの参考を提供します。",
+    icon: MdCloudUpload,
   },
 ];
 
 export const FEATURES_AR = [
   {
-    title: "ميزة المصدر المفتوح",
-    content: "مجانية بالكامل مع ثروة من خيارات التخصيص.",
+    title: "تحليل الشخصية",
+    content: "تحليل شامل للدوازده منزل لكشف سمات الشخصية المتعددة.",
     icon: BsGithub,
   },
   {
-    title: "تصميم متجاوب",
-    content: "تم تصميم القوالب بعناية لضمان عرض مثالي على أي جهاز.",
+    title: "تعليم الطفل",
+    content:
+      "فهم كيف يظهر شخصية الطفل في بيئة مختلفة لتحقيق التعليم المخصص للفرد.",
     icon: FaMobileScreenButton,
   },
   {
-    title: "تخصيص سهل",
+    title: "تخطيط الوظيفة",
     content:
-      "غير الألوان والخطوط والتخطيطات بسهولة دون الحاجة إلى معرفة بالبرمجة.",
+      "تقديم التوجيه لخيارات الوظيفة والتنمية المستقبلية، مساعدتك على التحضير للمستقبل.",
     icon: FaToolbox,
   },
   {
-    title: "مُحسّن لمحركات البحث",
-    content:
-      "تم بناء القوالب مع مراعاة تحسين محركات البحث لتعزيز قابلية اكتشاف موقعك.",
+    title: "المحادثات الاجتماعية",
+    content: "كأداة اجتماعية، تقلص بسرعة المسافة بين الناس.",
     icon: MagnetIcon,
   },
   {
-    title: "نشر بنقرة واحدة",
+    title: "اختيار الشريك",
     content:
-      "متكاملة بشكل وثيق مع خدمات استضافة الويب الرائدة لنشر الموقع فوراً.",
+      "فهم شخصية الطرف الآخر ورغباته من خلال مزيج خرائط القدر الفلكية، مما يوفر مرجعًا لكيفية التعامل.",
     icon: MdCloudUpload,
-  },
-  {
-    title: "دعم العولمة",
-    content: "يدعم لغات متعددة، مما يجعل موقعك جذابًا لجمهور عالمي.",
-    icon: FaEarthAsia,
   },
 ];
 
 export const FEATURES_ES = [
   {
-    title: "Ventaja del Código Abierto",
+    title: "Perfil de Personalidad",
     content:
-      "Completamente gratuito con una riqueza de opciones de personalización.",
+      "Un análisis integral de las doce casas para revelar tus múltiples rasgos de personalidad.",
     icon: BsGithub,
   },
   {
-    title: "Diseño Responsivo",
+    title: "Educación Infantil",
     content:
-      "Plantillas diseñadas meticulosamente para garantizar una visualización óptima en cualquier dispositivo.",
+      "Entiende cómo se manifiesta la personalidad de un niño en diferentes entornos para lograr una educación adaptada al individuo.",
     icon: FaMobileScreenButton,
   },
   {
-    title: "Personalización Fácil",
+    title: "Planificación Profesional",
     content:
-      "Cambia colores, fuentes y diseños sin esfuerzo y sin necesidad de conocimientos de codificación.",
+      "Proporcionar orientación para las elecciones profesionales y el desarrollo futuro, ayudándote a estar preparado para el futuro.",
     icon: FaToolbox,
   },
   {
-    title: "Optimizado para SEO",
+    title: "Conversación Social",
     content:
-      "Plantillas construidas con la optimización de motores de búsqueda en mente para mejorar la descubribilidad de tu sitio web.",
+      "Como herramienta social, reducir rápidamente la distancia entre las personas.",
     icon: MagnetIcon,
   },
   {
-    title: "Despliegue con Un Clic",
+    title: "Selección de Pareja",
     content:
-      "Integrado estrechamente con servicios líderes de alojamiento web para la publicación instantánea del sitio web.",
+      "Entender la personalidad y preferencias de la otra parte a través de la combinación de mapas de destino astrológicos, proporcionando una referencia para convivir.",
     icon: MdCloudUpload,
-  },
-  {
-    title: "Soporte de Globalización",
-    content:
-      "Soporta múltiples idiomas, haciendo tu sitio web atractivo para una audiencia global.",
-    icon: FaEarthAsia,
   },
 ];
 
 export const FEATURES_RU = [
   {
-    title: "Преимущество Открытого Исходного Кода",
-    content: "Полностью бесплатно с широкими возможностями настройки.",
+    title: "Особенности личности",
+    content:
+      "Полный анализ двенадцати домов, чтобы раскрыть ваши многогранные особенности личности.",
     icon: BsGithub,
   },
   {
-    title: "Адаптивный Дизайн",
+    title: "Развитие детей",
     content:
-      "Шаблоны, тщательно разработанные для обеспечения оптимального отображения на любом устройстве.",
+      "Понимание, как личность ребенка проявляется в разных средах, для достижения индивидуализированного воспитания.",
     icon: FaMobileScreenButton,
   },
   {
-    title: "Легкая Настройка",
+    title: "Карьерное планирование",
     content:
-      "Легко изменяйте цвета, шрифты и макеты без знаний в области программирования.",
+      "Предоставление руководства по выбору профессии и будущему развитию, помогая вам быть готовым к будущему.",
     icon: FaToolbox,
   },
   {
-    title: "Оптимизировано для Поисковых Систем",
+    title: "Общение в обществе",
     content:
-      "Шаблоны созданы с учетом оптимизации для поисковых систем, чтобы повысить обнаруживаемость вашего сайта.",
+      "В качестве социального инструмента, быстро сокращение расстояния между людьми.",
     icon: MagnetIcon,
   },
   {
-    title: "Развертывание в Один Клик",
+    title: "Выбор партнера",
     content:
-      "Плотно интегрировано с ведущими сервисами веб-хостинга для мгновенной публикации сайта.",
+      "Понимание личности и предпочтений другого лица через сочетание астрологических судебных карт, предоставление справки для общения.",
     icon: MdCloudUpload,
-  },
-  {
-    title: "Поддержка Глобализации",
-    content:
-      "Поддерживает несколько языков, делая ваш сайт привлекательным для мировой аудитории.",
-    icon: FaEarthAsia,
   },
 ];
 
@@ -231,6 +233,7 @@ interface FeaturesCollection {
 export const ALL_FEATURES: FeaturesCollection = {
   FEATURES_EN,
   FEATURES_ZH,
+  FEATURES_TW,
   FEATURES_JA,
   FEATURES_AR,
   FEATURES_ES,

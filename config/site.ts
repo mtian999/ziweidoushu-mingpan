@@ -17,9 +17,9 @@ const baseSiteConfig = {
   ],
   authors: [
     {
-      name: "weijunext",
-      url: "https://weijunext.com",
-      twitter: "https://twitter.com/weijunext",
+      name: "maomaoyu",
+      url: "",
+      twitter: "",
     },
   ],
   creator: "@weijunext",

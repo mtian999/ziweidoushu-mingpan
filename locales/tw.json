@@ -1,4 +1,17 @@
 {
+  "Fate": {
+    "description": "輸入資訊點擊「生成」按鈕獲取您的專屬星座圖",
+    "form": {
+      "birthday": "生日",
+      "birthTime": "出生時間",
+      "gender": "性別",
+      "create": "生成",
+      "download": "下載"
+    }
+  },
+  "Header": {
+    "title": "紫微斗數"
+  },
   "CTA": {
     "title": "免費生成您的專屬命盤",
     "description1": "生成",

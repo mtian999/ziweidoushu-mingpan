@@ -5,18 +5,36 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import { siteConfig } from "@/config/site";
-import { defaultLocale } from "@/lib/i18n";
+import { defaultLocale, getDictionary } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import "@/styles/loading.css";
 import { Analytics } from "@vercel/analytics/react";
 import { Viewport } from "next";
-import { Inter as FontSans } from "next/font/google";
 
-export const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+const links = [
+  {
+    label: "Features",
+    href: "#Features",
+  },
+  {
+    label: "Pricing",
+    href: "#Pricing",
+  },
+  // {
+  //   label: "Wall of Love",
+  //   href: "#WallOfLove",
+  // },
+  {
+    label: "FAQ",
+    href: "#FAQ",
+  },
+];
+
+// export const fontSans = FontSans({
+//   subsets: ["latin"],
+//   variable: "--font-sans",
+// });
 
 export const metadata = {
   title: siteConfig.name,
@@ -38,23 +56,21 @@ export default async function Layout({
   params: { lang },
 }: {
   children: React.ReactNode;
-  params: { lang: string | undefined };
+  params: { lang: string };
 }) {
+  let langName = lang !== "index" ? lang : defaultLocale;
+  const dict = await getDictionary(langName);
+
   return (
     <html lang={lang || defaultLocale} suppressHydrationWarning>
       <head />
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}
-      >
+      <body className={cn("min-h-screen bg-background font-sans antialiased")}>
         <ThemeProvider
           attribute="class"
           defaultTheme={siteConfig.nextThemeColor}
           enableSystem
         >
-          <Header />
+          <Header locale={dict.Header} links={links} />
           <main className="flex flex-col items-center py-6">{children}</main>
           <Footer />
           <Analytics />
