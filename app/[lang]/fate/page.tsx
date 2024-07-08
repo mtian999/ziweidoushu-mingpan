@@ -11,7 +11,7 @@ export async function generateMetadata({
 
   const dict = await getDictionary(langName);
 
-  return dict.Metadata?.home || {};
+  return dict.Metadata?.fate || {};
 }
 
 export default async function Page({
