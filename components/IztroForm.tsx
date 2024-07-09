@@ -113,8 +113,8 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
               lang={iztroLang}
             />
           ) : (
-            <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24 pt-24 md:pt-32 text-center">
-              <h2 className=" tracking-tight text-slate-700 dark:text-slate-400">
+            <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 pt-16 md:pt-24 text-center">
+              <h2 className="tracking-tight text-slate-700 dark:text-slate-400">
                 {locale.description}
               </h2>
             </section>

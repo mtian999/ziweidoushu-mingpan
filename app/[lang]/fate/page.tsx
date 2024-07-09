@@ -23,5 +23,12 @@ export default async function Page({
   let langName = lang !== "index" ? lang : defaultLocale;
   const dict = await getDictionary(langName);
 
-  return <IztroForm locale={dict.Fate} lang={lang} />;
+  return (
+    <>
+      <h1 className="tracking-tight text-slate-700 dark:text-slate-400">
+        {dict.Fate.h1}
+      </h1>
+      <IztroForm locale={dict.Fate} lang={lang} />
+    </>
+  );
 }

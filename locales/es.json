@@ -1,5 +1,6 @@
 {
   "Fate": {
+    "h1": "Calculadora de Zi Wei Dou Shu",
     "description": "Ingrese la información y haga clic en el botón `Generar` para obtener su gráfico estelar exclusivo",
     "form": {
       "birthday": "Cumpleaños",

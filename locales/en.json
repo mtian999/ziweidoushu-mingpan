@@ -1,5 +1,6 @@
 {
   "Fate": {
+    "h1": "Calculadora de Zi Wei Dou Shu",
     "description": "Enter information and click the `Generate` button to get your exclusive star chart",
     "form": {
       "birthday": "Birthday",
