@@ -1,0 +1,82 @@
+{
+  "Fate": {
+    "h1": "Ziwei-Doushu-Chart",
+    "description": "Gib deine Informationen ein und klicke auf die Schaltfläche Generieren, um deinen exklusiven Ziwei-Doushu-Chart zu erhalten",
+    "form": {
+      "birthday": "Geburtstag",
+      "birthTime": "Zeitpunkt der Geburt",
+      "gender": "Geschlecht",
+      "create": "Generieren",
+      "download": "Herunterladen"
+    }
+  },
+  "Header": {
+    "title": "Ziwei-Doushu"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Ziwei-Doushu | Kostenlose Ziwei-Chart - Erforsche dein Schicksal und zukünftige Trends",
+      "description": "Die beliebtesten Wahrsagemethoden 2024: Ziwei-Doushu 2024, die Astrologie 2024, Tarot 2024, Palmomantie 2024. Hier ist Ziwei-Doushu 2024, kostenlose Ziwei-Chart, kostenlose Chart-Generierung, Erstellung eines komplexen Chart-Systems, um das individuelle Charakter, Schicksal und zukünftige Trends zu enthüllen.",
+      "keywords": [
+        "Ziwei-Doushu 2024",
+        "Kostenlose Chart-Generierung",
+        "Chinesische Wahrsagekunst",
+        "Antike chinesische Philosophie"
+      ]
+    },
+    "fate": {
+      "title": "Ziwei-Doushu-Chart | Chinesische Astrologie 2024 | Kostenlose Ziwei-Doushu-Chart",
+      "description": "Die beliebtesten Wahrsagemethoden 2024: Ziwei-Doushu 2024, die Astrologie 2024, Tarot 2024, Palmomantie 2024. Hier ist Ziwei-Doushu 2024, kostenlose Ziwei-Chart, kostenlose Chart-Generierung, Erstellung eines komplexen Chart-Systems, um das individuelle Charakter, Schicksal und zukünftige Trends zu enthüllen.",
+      "keywords": [
+        "Ziwei-Doushu-Chart",
+        "Ziwei-Doushu 2024",
+        "Kostenlose Chart-Generierung",
+        "Ziwei-Doushu online",
+        "Ziwei-Doushu Wahrsagekunst",
+        "Ziwei-Doushu kostenlos",
+        "Ziwei-Doushu-Werkzeug"
+      ]
+    }
+  },
+  "Hero": {
+    "title1": "Eine komplexere Astrologie als die chinesische Bazi-Berechnung, erforsche dein Schicksal",
+    "title2": "Ziwei-Doushu",
+    "title3": "Kostenlose Ziwei-Chart",
+    "description": "Seit jeher suchen Menschen nach den Geheimnissen des Universums und versuchen, darin die Bedeutung des Lebens und Anleitungen für die Zukunft zu finden. Ob es die Astrologie, Tarot, Numerologie oder Palmomantie ist, jede Wahrsagemethode bietet eine einzigartige Perspektive, um uns zu helfen, uns selbst und die Welt um uns herum zu verstehen. Kostenlose Ziwei-Chart, erfahre mehr über deinen Lebensweg, beherrsche die zukünftigen Trends, erstelle jetzt deine Ziwei-Doushu-Chart für 2024 kostenlos."
+  },
+  "SocialProof": {
+    "maker": "Ersteller"
+  },
+  "Feature": {
+    "title": "Die Funktion des Charts"
+  },
+  "Pricing": {
+    "title": "Preisgestaltung",
+    "title2": "",
+    "description": "Derzeit bieten wir nur kostenlose Dienste zur Generierung von Ziwei-Doushu-Charts an",
+    "doYouLike": "",
+    "follow": ""
+  },
+  "WallOfLove": {
+    "title": "Wand der Liebe",
+    "description1": "Liebesbekenntnisse unserer Nutzer",
+    "description2": "Was unsere Kunden über uns sagen",
+    "description3": "Unsere Erfolgsgeschichten"
+  },
+  "FAQ": {
+    "title": "Häufig gestellte Fragen",
+    "description": "Hier finden Sie einige der häufigsten Fragen."
+  },
+  "CTA": {
+    "title": "Erstelle jetzt deinen exklusiven Ziwei-Doushu-Chart kostenlos",
+    "description1": "Generieren",
+    "description2": "Exklusiver Ziwei-Doushu-Chart",
+    "description3": "",
+    "description4": "!",
+    "description5": "",
+    "description6": ""
+  },
+  "CTAButton": {
+    "title": "Ziwei-Doushu-Chart"
+  }
+}

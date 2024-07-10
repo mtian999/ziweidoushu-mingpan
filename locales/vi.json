@@ -1,0 +1,82 @@
+{
+  "Fate": {
+    "h1": "Tạo biểu đồ số phận Zi Wei Dou Shu",
+    "description": "Nhập thông tin và nhấn nút Tạo để nhận biểu đồ số phận riêng của bạn dựa trên Zi Wei Dou Shu",
+    "form": {
+      "birthday": "Ngày sinh",
+      "birthTime": "Giờ sinh",
+      "gender": "Giới tính",
+      "create": "Tạo",
+      "download": "Tải về"
+    }
+  },
+  "Header": {
+    "title": "Zi Wei Dou Shu"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Zi Wei Dou Shu | Tạo miễn phí biểu đồ số phận Zi Wei Dou Shu - Khám phá số phận và xu hướng tương lai",
+      "description": "Phương pháp bói toán nổi bật năm 2024: Zi Wei Dou Shu 2024, Nghệ thuật sinh mệnh 2024, Bội bài 2024, Chân dung học 2024. Đây là trang web của Zi Wei Dou Shu 2024, tạo miễn phí biểu đồ số phận dựa trên Zi Wei Dou Shu, tạo biểu đồ số phận miễn phí, xây dựng một hệ thống phức tạp của biểu đồ số phận, để tiết lộ tính cách, số phận và xu hướng tương lai của cá nhân.",
+      "keywords": [
+        "Zi Wei Dou Shu 2024",
+        "Tạo biểu đồ số phận miễn phí",
+        "Bói toán Trung Quốc",
+        "Triết học cổ đại Trung Quốc"
+      ]
+    },
+    "fate": {
+      "title": "Tạo biểu đồ số phận Zi Wei Dou Shu | Astrology Trung Quốc 2024 | Tạo miễn phí biểu đồ số phận Zi Wei Dou Shu",
+      "description": "Phương pháp bói toán nổi bật năm 2024: Zi Wei Dou Shu 2024, Nghệ thuật sinh mệnh 2024, Bội bài 2024, Chân dung học 2024. Đây là trang web của Zi Wei Dou Shu 2024, tạo miễn phí biểu đồ số phận dựa trên Zi Wei Dou Shu, tạo biểu đồ số phận miễn phí, xây dựng một hệ thống phức tạp của biểu đồ số phận, để tiết lộ tính cách, số phận và xu hướng tương lai của cá nhân.",
+      "keywords": [
+        "Tạo biểu đồ số phận Zi Wei Dou Shu",
+        "Zi Wei Dou Shu 2024",
+        "Tạo biểu đồ số phận miễn phí",
+        "Zi Wei Dou Shu trực tuyến",
+        "Bói toán Zi Wei Dou Shu",
+        "Zi Wei Dou Shu miễn phí",
+        "Công cụ Zi Wei Dou Shu"
+      ]
+    }
+  },
+  "Hero": {
+    "title1": "Một thuật toán phức tạp hơn so với Bazi của Trung Quốc, khám phá số phận của bạn.",
+    "title2": "Zi Wei Dou Shu",
+    "title3": "Tạo miễn phí biểu đồ số phận Zi Wei Dou Shu",
+    "description": "Kể từ xưa, con người đã luôn tìm tòi bí mật của vũ trụ, cố gắng tìm ra ý nghĩa của cuộc sống và hướng dẫn cho tương lai. Cho dù là thuật toán sao, bói bài, số học hay chân dung học, mỗi phương pháp bói toán đều cung cấp một góc nhìn độc đáo, giúp chúng ta hiểu bản thân và thế giới xung quanh. Tạo miễn phí biểu đồ số phận Zi Wei Dou Shu, hiểu rõ quỹ đạo của cuộc đời bạn, nắm bắt xu hướng tương lai, hãy tạo ngay biểu đồ số phận của bạn năm 2024 dựa trên Zi Wei Dou Shu."
+  },
+  "SocialProof": {
+    "maker": ""
+  },
+  "Feature": {
+    "title": "Tác dụng của biểu đồ số phận"
+  },
+  "Pricing": {
+    "title": "Giá cả",
+    "title2": "",
+    "description": "Hiện tại chỉ cung cấp dịch vụ tạo biểu đồ số phận Zi Wei Dou Shu miễn phí",
+    "doYouLike": "",
+    "follow": ""
+  },
+  "WallOfLove": {
+    "title": "",
+    "description1": "",
+    "description2": "",
+    "description3": ""
+  },
+  "FAQ": {
+    "title": "Câu hỏi thường gặp",
+    "description": "Dưới đây là một số câu hỏi thường gặp."
+  },
+  "CTA": {
+    "title": "Tạo miễn phí biểu đồ số phận riêng của bạn dựa trên Zi Wei Dou Shu",
+    "description1": "Tạo",
+    "description2": "Biểu đồ số phận riêng của bạn dựa trên Zi Wei Dou Shu",
+    "description3": "",
+    "description4": "!",
+    "description5": "",
+    "description6": ""
+  },
+  "CTAButton": {
+    "title": "Tạo biểu đồ số phận Zi Wei Dou Shu"
+  }
+}

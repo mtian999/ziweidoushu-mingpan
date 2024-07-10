@@ -1,0 +1,82 @@
+{
+  "Fate": {
+    "h1": "자위돈수 배판",
+    "description": "입력 정보를 입력하고 `생성` 버튼을 클릭하여 고유의 자瑋명潘을 얻으세요.",
+    "form": {
+      "birthday": "생일",
+      "birthTime": "시辰",
+      "gender": "성별",
+      "create": "생성",
+      "download": "다운로드"
+    }
+  },
+  "Header": {
+    "title": "자瑋돈수"
+  },
+  "Metadata": {
+    "home": {
+      "title": "紫微斗数 | 무료 자瑋배판 - 運命과 未来 추势에 대한 탐색",
+      "description": "2024 最 Popular 的 divination method: 자瑋돈수 2024, 命理学 2024, 타로카드 2024, 2024  Palmistry. Here is 紫微斗数 2024, Free 자瑋 배판， Free to generate destiny plate, building a complex destiny plate system, thereby revealing personal character, fate and future trends.",
+      "keywords": [
+        "자瑋돈수 2024",
+        "무료 명潘 생성",
+        "중국 占卦",
+        "古代 중국 哲学"
+      ]
+    },
+    "fate": {
+      "title": "자瑋돈수 배판 | 중국 占星术 2024 | 무료 자瑋두수 배판",
+      "description": "2024 最 Popular divination method: 紫微斗数 2024, 命理学 2024, 타로카드 2024, 2024 Palmistry. Here is 紫微斗数 2024, Free 자瑋 배판， Free to generate destiny plate, building a complex destiny plate system, thereby revealing personal character, fate and future trends.",
+      "keywords": [
+        "자瑋돈수 배판",
+        "자瑋돈수 2024",
+        "무료 명潘 생성",
+        "자瑋돈수 온라인",
+        "자瑋돈수 占卦",
+        "자瑋돈수 무료",
+        "자瑋돈수 도구"
+      ]
+    }
+  },
+  "Hero": {
+    "title1": "중국 八字 추측보다 더 복잡한 명理学， 당신의 운명을 탐색하세요",
+    "title2": "紫微斗数",
+    "title3": "무료 운명 그래프 생성",
+    "description": "이제는 우주의 귀모를 탐색하면서， 삶의 의미와 미래의 지南을 찾아나가고 있었습니다. 占星術， 타로카드， 숫자학， 팔로징학의 각가지 divination method은 각각의 고유한 시角로부터 우리가 자신과 周違의 세계를 이해할 수 있어 helpers understand themselves and the world around them. Free 자瑋배판， 당신의 인생 轨跡를 알아보고， 미래의 추勢을 얻으러지 가세요，  immediatemently free to generate your 2024 자瑋돈수 destiny chart. "
+  },
+  "SocialProof": {
+    "maker": ""
+  },
+  "Feature": {
+    "title": "destiny chart 작용"
+  },
+  "Pricing": {
+    "title": " Pricing",
+    "title2": "",
+    "description": "현재는 무료의 자瑋돈수 명潘 생성 서비스만 공급합니다.",
+    "doYouLike": "",
+    "follow": ""
+  },
+  "WallOfLove": {
+    "title": "",
+    "description1": "",
+    "description2": "",
+    "description3": ""
+  },
+  "FAQ": {
+    "title": "FAQs",
+    "description": "이곳에는 가장 일반적인 질문들이 있습니다."
+  },
+  "CTA": {
+    "title": "무료로 당신의 고유한 destiny chart 생성하세요",
+    "description1": "생성",
+    "description2": "고유한 destiny chart",
+    "description3": "",
+    "description4": "!",
+    "description5": "",
+    "description6": ""
+  },
+  "CTAButton": {
+    "title": "운명 그래프 생성"
+  }
+}

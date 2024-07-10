@@ -1,0 +1,82 @@
+{
+  "Fate": {
+    "h1": "Affichage du disque de Zi Wei Dou Shu",
+    "description": "Entrez les informations et cliquez sur le bouton Générer pour obtenir votre disque de destin personnel Zi Wei",
+    "form": {
+      "birthday": "Date de naissance",
+      "birthTime": "Heure de naissance",
+      "gender": "Sexe",
+      "create": "Générer",
+      "download": "Télécharger"
+    }
+  },
+  "Header": {
+    "title": "Zi Wei Dou Shu"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Zi Wei Dou Shu | Disque de Zi Wei gratuit - Explorer le destin et les tendances futures",
+      "description": "La méthode de divination la plus populaire de 2024 : Zi Wei Dou Shu 2024, la métaphysique 2024, les tarots 2024, la chiromancie 2024. Voici Zi Wei Dou Shu 2024, génération de disque de destin gratuit, génération de disque de destin gratuit, création d'un système de disque de destin complexe, révélant ainsi le caractère, le destin et les tendances futures de l'individu.",
+      "keywords": [
+        "Zi Wei Dou Shu 2024",
+        "Génération de disque de destin gratuit",
+        "Divination chinoise",
+        "Philosophie antique chinoise"
+      ]
+    },
+    "fate": {
+      "title": "Affichage du disque de Zi Wei Dou Shu | Astrologie chinoise 2024 | Génération de disque de Zi Wei gratuit",
+      "description": "La méthode de divination la plus populaire de 2024 : Zi Wei Dou Shu 2024, la métaphysique 2024, les tarots 2024, la chiromancie 2024. Voici Zi Wei Dou Shu 2024, génération de disque de Zi Wei gratuit, génération de disque de destin gratuit, création d'un système de disque de destin complexe, révélant ainsi le caractère, le destin et les tendances futures de l'individu.",
+      "keywords": [
+        "Affichage du disque de Zi Wei Dou Shu",
+        "Zi Wei Dou Shu 2024",
+        "Génération de disque de destin gratuit",
+        "Zi Wei Dou Shu en ligne",
+        "Divination de Zi Wei Dou Shu",
+        "Zi Wei Dou Shu gratuit",
+        "Outil de Zi Wei Dou Shu"
+      ]
+    }
+  },
+  "Hero": {
+    "title1": "Une métaphysique plus complexe que le calcul des huit caractères chinois, explorez votre destin",
+    "title2": "Zi Wei Dou Shu",
+    "title3": "Génération de disque de Zi Wei gratuit",
+    "description": "Depuis des temps immémoriaux, l'humanité a cherché à explorer les mystères de l'univers, cherchant à en découvrir le sens de la vie et des orientations pour l'avenir. Que ce soit l'astrologie, les tarots, la numérologie ou la chiromancie, chaque méthode de divination offre une perspective unique pour nous aider à comprendre nous-mêmes et le monde qui nous entoure. Générez gratuitement votre disque de Zi Wei pour comprendre votre trajectoire de vie et maîtriser les tendances futures, générez dès maintenant votre disque de Zi Wei Dou Shu 2024 gratuit."
+  },
+  "SocialProof": {
+    "maker": ""
+  },
+  "Feature": {
+    "title": "Le rôle du disque de destin"
+  },
+  "Pricing": {
+    "title": "Tarification",
+    "title2": "",
+    "description": "Actuellement, seul le service de génération de disque de Zi Wei Dou Shu gratuit est offert",
+    "doYouLike": "",
+    "follow": ""
+  },
+  "WallOfLove": {
+    "title": "",
+    "description1": "",
+    "description2": "",
+    "description3": ""
+  },
+  "FAQ": {
+    "title": "FAQ",
+    "description": "Voici quelques questions les plus fréquemment posées."
+  },
+  "CTA": {
+    "title": "Générez gratuitement votre disque de destin personnel Zi Wei",
+    "description1": "Générer",
+    "description2": "Disque de destin personnel Zi Wei",
+    "description3": "",
+    "description4": "！",
+    "description5": "",
+    "description6": ""
+  },
+  "CTAButton": {
+    "title": "Affichage du disque de Zi Wei"
+  }
+}

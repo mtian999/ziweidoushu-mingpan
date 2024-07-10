@@ -1,7 +1,23 @@
 import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 
-export const locales = ["", "en", "zh", "tw", "ja", "ar", "es", "ru"];
+export const locales = [
+  "",
+  "en",
+  "zh",
+  "tw",
+  "ja",
+  "ar",
+  "es",
+  "ru",
+  "de",
+  "fr",
+  "ko",
+  "nl",
+  "pl",
+  "pt",
+  "vi",
+];
 export const localeNames: any = {
   en: "🇺🇸 English",
   zh: "🇨🇳 简体",
@@ -10,10 +26,18 @@ export const localeNames: any = {
   ar: "🇸🇦 العربية",
   es: "🇪🇸 Español",
   ru: "🇷🇺 Русский",
+  de: "de Deutsch", //德语
+  fr: "fr Français", //法语
+  ko: "ko 한국어", //韩语
+  nl: "nl Nederlands", //荷兰语
+  pl: "pl Polski", //波兰语
+  pt: "pt Português", //葡萄牙语
+  vi: "vi Tiếng Việt", //越南语
 };
 export type LocalesDict = {
   [key: string]: string; // 使用索引签名来表示键值对
 };
+// 提供给紫微斗数的国际化配置
 export const localesDict: LocalesDict = {
   en: "en-US",
   zh: "zh-CN",
@@ -22,6 +46,13 @@ export const localesDict: LocalesDict = {
   ar: "en-US",
   es: "en-US",
   ru: "en-US",
+  de: "en-US",
+  fr: "en-US",
+  ko: "ko-KR",
+  nl: "en-US",
+  pl: "en-US",
+  pt: "en-US",
+  vi: "en-US",
 };
 export const defaultLocale = "en";
 
@@ -41,6 +72,13 @@ const dictionaries: any = {
   ar: () => import("@/locales/ar.json").then((module) => module.default),
   es: () => import("@/locales/es.json").then((module) => module.default),
   ru: () => import("@/locales/ru.json").then((module) => module.default),
+  de: () => import("@/locales/de.json").then((module) => module.default),
+  fr: () => import("@/locales/fr.json").then((module) => module.default),
+  ko: () => import("@/locales/ko.json").then((module) => module.default),
+  nl: () => import("@/locales/nl.json").then((module) => module.default),
+  pl: () => import("@/locales/pl.json").then((module) => module.default),
+  pt: () => import("@/locales/pt.json").then((module) => module.default),
+  vi: () => import("@/locales/vi.json").then((module) => module.default),
 };
 
 export const getDictionary = async (locale: string) => {

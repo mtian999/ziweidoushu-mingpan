@@ -1,7 +1,7 @@
 {
   "Fate": {
     "h1": "紫微斗数排盘",
-    "description": "输入信息点击`生成`按钮获取专属星盘",
+    "description": "输入信息点击`生成`按钮获取专属紫薇命盘",
     "form": {
       "birthday": "生日",
       "birthTime": "时辰",
@@ -34,13 +34,13 @@
     }
   },
   "Hero": {
-    "title1": "比八字测算更复杂的命理学，探索你的命运",
+    "title1": "比中国八字测算更复杂的命理学，探索你的命运",
     "title2": "紫微斗数",
     "title3": "免费紫薇排盘",
     "description": "自古以来，人类一直在探索宇宙的奥秘，试图从中寻找生命的意义和未来的指引。无论是占星术、塔罗牌、数字学还是手相术，每一种占卜方法都提供了一种独特的视角，帮助我们理解自己和周围的世界。免费紫薇排盘，了解你的人生轨迹，掌握未来趋势，立即免费生成你的2024紫微斗数命盘。"
   },
   "SocialProof": {
-    "maker": "制作者快速开发"
+    "maker": ""
   },
   "Feature": {
     "title": "命盘的作用"
@@ -53,25 +53,25 @@
     "follow": ""
   },
   "WallOfLove": {
-    "title": "Wall of Love",
-    "description1": "如果你使用这个落地页模板并在推特上推荐了，",
-    "description2": "请告诉我",
-    "description3": "，我会在这里展示你的推文和推荐。"
+    "title": "",
+    "description1": "",
+    "description2": "",
+    "description3": ""
   },
   "FAQ": {
     "title": "FAQs",
     "description": "这里有一些最常见的问题。"
   },
   "CTA": {
-    "title": "免费生成您的专属命盘",
+    "title": "免费生成您的专属紫薇命盘",
     "description1": "生成",
-    "description2": "专属命盘",
+    "description2": "专属紫薇命盘",
     "description3": "",
     "description4": "！",
     "description5": "",
     "description6": ""
   },
   "CTAButton": {
-    "title": "紫薇排盤"
+    "title": "紫薇排盘"
   }
 }

@@ -1,7 +1,7 @@
 {
   "Fate": {
     "h1": "Calculadora de Zi Wei Dou Shu",
-    "description": "Enter information and click the `Generate` button to get your exclusive star chart",
+    "description": "Enter information and click the `Generate` button to get your exclusive ZiWei chart",
     "form": {
       "birthday": "Birthday",
       "birthTime": "Birth Time",
@@ -60,7 +60,7 @@
         "2024 astrology",
         "Chinese destiny"
       ],
-      "description": "Explore your destiny with Zi Wei Dou Shu, a complex Chinese astrology. Generate your free personalized destiny chart for insights on personality, career, and more."
+      "description": "Explore your destiny with Zi Wei Dou Shu, a complex Chinese astrology. Generate your free personalized destiny chart—ZiWei chart—for insights on personality, career, and more."
     },
     "fate": {
       "title": "Zi Wei Dou Shu Calculator | Chinese Astrology 2024 | Free destiny chart generation",
