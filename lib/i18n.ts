@@ -45,13 +45,13 @@ export const localeNames: any = {
   ar: "🇸🇦 العربية",
   es: "🇪🇸 Español",
   ru: "🇷🇺 Русский",
-  de: "de Deutsch", //德语
-  fr: "fr Français", //法语
-  ko: "ko 한국어", //韩语
-  nl: "nl Nederlands", //荷兰语
-  pl: "pl Polski", //波兰语
-  pt: "pt Português", //葡萄牙语
-  vi: "vi Tiếng Việt", //越南语
+  de: "🇩🇪 Deutsch", //德语
+  fr: "🇫🇷 Français", //法语
+  ko: "🇰🇵|🇰🇷 한국어", //韩语
+  nl: "🇳🇱 Nederlands", //荷兰语
+  pl: "🇵🇱 Polski", //波兰语
+  pt: "🇵🇹 Português", //葡萄牙语
+  vi: "🇻🇳 Tiếng Việt", //越南语
 };
 export type LocalesDict = {
   [key: string]: string; // 使用索引签名来表示键值对
