@@ -13,14 +13,22 @@ interface Link {
   href: string;
 }
 
-const Header = ({ locale, links = [] }: { locale: any; links?: Link[] }) => {
+const Header = ({
+  locale,
+  links = [],
+  langName,
+}: {
+  locale: any;
+  links?: Link[];
+  langName: string;
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <header className="py-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <nav className="relative z-50 flex justify-between">
         <div className="flex items-center md:gap-x-12">
           <Link
-            href="/"
+            href={`/${langName}`}
             aria-label={locale.title}
             title={locale.title}
             className="flex items-center space-x-1 font-bold"

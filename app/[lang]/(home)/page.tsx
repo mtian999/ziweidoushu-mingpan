@@ -1,3 +1,4 @@
+import { HreflangLinks } from "@/components/head/HreflangLinks";
 import CTA from "@/components/home/CTA";
 import FAQ from "@/components/home/FAQ";
 import Feature from "@/components/home/Feature";
@@ -31,6 +32,7 @@ export default async function LangHome({
 
   return (
     <>
+      <HreflangLinks langName={langName} />
       {/* Hero Section */}
       <Hero locale={dict.Hero} CTALocale={dict.CTAButton} langName={langName} />
       <SocialProof locale={dict.SocialProof} />

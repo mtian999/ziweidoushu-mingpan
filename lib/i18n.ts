@@ -18,6 +18,25 @@ export const locales = [
   "pt",
   "vi",
 ];
+
+export function getHreflangLinks(ignoreLangName: string): string[] {
+  const hreflangLinks: string[] = [];
+  locales.forEach((lang) => {
+    if (lang) {
+      if (lang === ignoreLangName) {
+        return;
+      }
+      if (lang === "zh") {
+        hreflangLinks.push("zh-Hans");
+      } else if (lang === "tw") {
+        hreflangLinks.push("zh-Hant");
+      } else {
+        hreflangLinks.push(lang);
+      }
+    }
+  });
+  return hreflangLinks;
+}
 export const localeNames: any = {
   en: "🇺🇸 English",
   zh: "🇨🇳 简体",
@@ -52,7 +71,7 @@ export const localesDict: LocalesDict = {
   nl: "en-US",
   pl: "en-US",
   pt: "en-US",
-  vi: "en-US",
+  vi: "vi-VN",
 };
 export const defaultLocale = "en";
 

@@ -1,3 +1,4 @@
+import { HreflangLinks } from "@/components/head/HreflangLinks";
 import { IztroForm } from "@/components/IztroForm";
 import { defaultLocale, getDictionary } from "@/lib/i18n";
 import { Metadata } from "next";
@@ -25,6 +26,7 @@ export default async function Page({
 
   return (
     <>
+      <HreflangLinks langName={langName} path="/fate" />
       <h1 className="tracking-tight text-slate-700 dark:text-slate-400">
         {dict.Fate.h1}
       </h1>
