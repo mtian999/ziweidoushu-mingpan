@@ -190,6 +190,201 @@ export const FAQS_RU = [
   },
 ];
 
+export const FAQS_DE = [
+  {
+    title: "Was ist Zi Wei Dou Shu?",
+    content:
+      "Zi Wei Dou Shu ist eine alte chinesische Schicksalskunst, die nicht nur als Unterhaltung dient, sondern auch als Werkzeug zur tiefen Selbstverständnis und zur Vorhersage zukünftiger Trends. Wir sind bestrebt, Zi Wei Dou Shu in einer einfach verständlichen Weise zu präsentieren, damit jeder die Faszination dieser Kunst erfahren kann.",
+  },
+  {
+    title: "Warum Zi Wei Dou Shu wählen?",
+    content:
+      "Zi Wei Dou Shu analysiert nicht nur das Persönlichkeitsprofil einer Person, sondern umfasst auch Gesundheit, Reichtum, Karriere und Beziehungen zu anderen. Sie integriert alte chinesische philosophische Gedanken wie die Theorie von Yin und Yang sowie die fünf Elemente, bietet also eine einzigartige kulturelle Erfahrung. Jeder Schicksalsplan ist einzigartig und bietet eine personalisierte und tiefgehende Analyse.",
+  },
+  {
+    title: "Ist Zi Wei Dou Shu genau?",
+    content:
+      "Zi Wei Dou Shu ist eine traditionelle Schicksalskunst, deren Genauigkeit von verschiedenen Faktoren abhängt, einschließlich der Richtigkeit der Geburtszeit und des professionellen Niveaus des Interpreten.",
+  },
+  {
+    title: "Wie lange dauert es, einen Schicksalsplan zu erstellen?",
+    content:
+      "Unser Service ist darauf ausgelegt, schnell zu reagieren, so dass Sie fast sofort die Ergebnisse Ihrer Schicksalsanalyse erhalten können.",
+  },
+  {
+    title: "Kann das Ergebnis des Schicksalsplans geteilt werden?",
+    content:
+      "Natürlich, Sie können Ihre Schicksalsanalyse-Ergebnisse in sozialen Medien teilen und mit Freunden darüber diskutieren.",
+  },
+];
+
+export const FAQS_FR = [
+  {
+    title: "Qu'est-ce que le Zi Wei Dou Shu ?",
+    content:
+      "Le Zi Wei Dou Shu, une étude de la destinologie chinoise ancienne et profonde, est non seulement une forme de divertissement, mais aussi un outil pour comprendre en profondeur soi-même et les tendances futures. Nous nous engageons à présenter le charme du Zi Wei Dou Shu de la manière la plus simple et accessible à tout le monde.",
+  },
+  {
+    title: "Pourquoi choisir le Zi Wei Dou Shu ?",
+    content:
+      "Le Zi Wei Dou Shu analyse non seulement la personnalité individuelle, mais couvre également de nombreux domaines tels que la santé, la richesse, la carrière et les relations interpersonnelles. Le Zi Wei Dou Shu intègre des pensées philosophiques anciennes chinoises, telles que la théorie du Yin et du Yang et des cinq éléments, offrant une expérience culturelle unique. Le schéma de destin de chaque personne est unique, et le Zi Wei Dou Shu peut fournir une analyse plus personnalisée et approfondie.",
+  },
+  {
+    title: "Le Zi Wei Dou Shu est-il précis ?",
+    content:
+      "Le Zi Wei Dou Shu est une étude de la destinologie traditionnelle, et sa précision dépend de divers facteurs, y compris l'exactitude de l'heure de naissance et le niveau professionnel de l'interprète.",
+  },
+  {
+    title: "Combien de temps faut-il pour générer un schéma de destin ?",
+    content:
+      "Notre service est conçu pour être rapide et réactif, vous pouvez obtenir presque instantanément les résultats de l'analyse du schéma de destin.",
+  },
+  {
+    title: "Les résultats du schéma de destin peuvent-ils être partagés ?",
+    content:
+      "Absolument, vous pouvez partager les résultats de votre schéma de destin sur les médias sociaux et discuter avec vos amis.",
+  },
+];
+
+export const FAQS_KO = [
+  {
+    title: "紫微斗数란 무엇입니까?",
+    content:
+      "紫微斗数는 중국의 오랜 역사를 가진 인명학입니다. 이것은 단순한 오락 방법이 아니라 자신과 미래의 추세를 깊이 이해하는 도구입니다. 우리는 가장 간단하고 이해하기 쉬운 방식으로 모든 사람이 紫微斗数의 매력을 경험할 수 있도록 최선을 다하고 있습니다.",
+  },
+  {
+    title: "왜 紫微斗数를 선택할까요?",
+    content:
+      "紫微斗数는 개인의 성격 분석 뿐만 아니라 건강, 재산, 직업, 인간 관계 등 여러 측면을 포함합니다. 이는 중국 고대의 철학적 사상인 양과 오행 이론을 융합하여 독특한 문화 경험을 제공합니다. 모든 사람의 운명 차트는 고유하며, 紫微斗数는 보다 개인화되고 심도 있는 분석을 제공할 수 있습니다.",
+  },
+  {
+    title: "紫微斗数는 정확합니까?",
+    content:
+      "紫微斗数는 전통적인 인명학이며, 정확성은 출생 시간의 정확성과 해석자의 전문성 수준 등 여러 요소에 달려 있습니다.",
+  },
+  {
+    title: "운명 차트 생성에 얼마나 걸립니까?",
+    content:
+      "우리 서비스는 빠른 응답을 위해 설계되었으며, 거의 즉시 운명 차트 분석 결과를 얻을 수 있습니다.",
+  },
+  {
+    title: "운명 차트 결과를 공유할 수 있습니까?",
+    content:
+      "물론입니다, 소셜 미디어에서 운명 차트 결과를 공유하고 친구들과 함께 논의할 수 있습니다.",
+  },
+];
+
+export const FAQS_NL = [
+  {
+    title: "Wat is Zi Wei Dou Shu?",
+    content:
+      "Zi Wei Dou Shu, een Chinese astrologie met een lange traditie, is niet alleen een manier van vermaak, maar ook een instrument om jezelf en toekomstige trends dieper te begrijpen. We zijn toegewijd aan het presenteren van Zi Wei Dou Shu op een manier die zo eenvoudig en begrijpelijk mogelijk is, zodat iedereen de charme ervan kan ervaren.",
+  },
+  {
+    title: "Waarom kiezen voor Zi Wei Dou Shu?",
+    content:
+      "Zi Wei Dou Shu analyseert niet alleen de persoonlijke aard, maar omvat ook aspecten zoals gezondheid, rijkdom, carrière en menselijke relaties. Het combineert de filosofische ideeën van het oude China, zoals de theorie van Yin en Yang en de vijf elementen, en biedt een unieke culturele ervaring. Elke individuele levenskaart is uniek, en Zi Wei Dou Shu kan een meer gepersonaliseerde en diepgaande analyse bieden.",
+  },
+  {
+    title: "Is Zi Wei Dou Shu nauwkeurig?",
+    content:
+      "Zi Wei Dou Shu is een traditionele astrologie, waarvan de nauwkeurigheid afhangt van verschillende factoren, waaronder de nauwkeurigheid van de geboortedatum en het professionele niveau van de interpreter.",
+  },
+  {
+    title: "Hoe lang duurt het om een levenskaart te genereren?",
+    content:
+      "Onze service is ontworpen voor snelle respons, u kunt bijna onmiddellijk de resultaten van de levenskaartanalyse krijgen.",
+  },
+  {
+    title: "Kan het resultaat van de levenskaart worden gedeeld?",
+    content:
+      "Zeker, u kunt het resultaat van uw levenskaart delen op sociale media en met vrienden bespreken.",
+  },
+];
+
+export const FAQS_PL = [
+  {
+    title: "Co to jest Zi Wei Dou Shu?",
+    content:
+      "Zi Wei Dou Shu to długa tradycja chińskich sztuk przewidywania losów, która jest nie tylko formą rozrywki, ale także narzędziem do głębokiej analizy siebie i przyszłych trendów. Staramy się przedstawić tę sztukę w sposób jak najprostszy i zrozumiały, aby każdy mógł odczuć jej urok.",
+  },
+  {
+    title: "Dlaczego wybrać Zi Wei Dou Shu?",
+    content:
+      "Zi Wei Dou Shu analizuje nie tylko indywidualny charakter, ale również obejmuje zdrowie, bogactwo, karierę i relacje z ludźmi. Ta sztuka łączy się z filozoficznymi koncepcjami starożytnych Chińczyków, takimi jak teoria yin i yang, pięć elementów, oferując unikalną doświadczenie kulturowe. Każdy los grafu jest wyjątkowy, a Zi Wei Dou Shu umożliwia bardziej indywidualne i głębokie analizy.",
+  },
+  {
+    title: "Czy Zi Wei Dou Shu jest dokładna?",
+    content:
+      "Zi Wei Dou Shu to tradycyjna sztuka przewidywania losów, a jej dokładność zależy od wielu czynników, w tym dokładności czasu urodzenia i poziomu wiedzy tłumacza.",
+  },
+  {
+    title: "Ile czasu potrzeba na wygenerowanie grafu losu?",
+    content:
+      "Nasze usługi są zaprojektowane z myślą o szybkim reagowaniu, możesz natychmiast otrzymać wyniki analizy grafu losu.",
+  },
+  {
+    title: "Czy wyniki grafu losu można dzielić?",
+    content:
+      "Z pewnością, możesz dzielić wyniki swojego grafu losu na portalach społecznościowych, dyskutując z przyjaciółmi.",
+  },
+];
+
+export const FAQS_PT = [
+  {
+    title: "O que é Zi Wei Dou Shu?",
+    content:
+      "Zi Wei Dou Shu, uma teoria chinesa de destino de longa data, não é apenas uma forma de entretenimento, mas também uma ferramenta para compreender profundamente o próprio eu e as tendências futuras. Nos dedicamos a tornar a experiência de Zi Wei Dou Shu atraente para todos de uma maneira simples e fácil de entender.",
+  },
+  {
+    title: "Por que escolher Zi Wei Dou Shu?",
+    content:
+      "Zi Wei Dou Shu não só analisa o caráter individual, mas também abrange vários aspectos, como saúde, riqueza, carreira e relacionamentos interpessoais. Zi Wei Dou Shu integra pensamentos filosóficos antigos chineses, como a teoria do yin e yang e dos cinco elementos, oferecendo uma experiência cultural única. Cada gráfico de destino é único, e Zi Wei Dou Shu pode fornecer uma análise mais personalizada e aprofundada.",
+  },
+  {
+    title: "Zi Wei Dou Shu é preciso?",
+    content:
+      "Zi Wei Dou Shu é uma teoria de destino tradicional, e sua precisão depende de vários fatores, incluindo a precisão do horário de nascimento e o nível de profissionalismo do interprete.",
+  },
+  {
+    title: "Quanto tempo leva para gerar o gráfico de destino?",
+    content:
+      "Nosso serviço é projetado para resposta rápida, e você pode obter quase imediatamente os resultados da análise do gráfico de destino.",
+  },
+  {
+    title: "Os resultados do gráfico de destino podem ser compartilhados?",
+    content:
+      "Claro, você pode compartilhar seus resultados do gráfico de destino nas redes sociais e discutir com seus amigos.",
+  },
+];
+
+export const FAQS_VI = [
+  {
+    title: "Zi Wei Dou Shu là gì?",
+    content:
+      "Zi Wei Dou Shu, một lý thuyết số phận truyền thống của Trung Quốc có nguồn gốc xa xưa, không chỉ là một hình thức giải trí, mà còn là một công cụ để hiểu sâu về bản thân và xu hướng tương lai. Chúng tôi cam kết mang đến sự hấp dẫn của Zi Wei Dou Shu bằng những cách đơn giản và dễ hiểu nhất cho mọi người.",
+  },
+  {
+    title: "Tại sao nên chọn Zi Wei Dou Shu?",
+    content:
+      "Zi Wei Dou Shu không chỉ phân tích tính cách cá nhân, mà còn bao gồm nhiều khía cạnh khác như sức khỏe, tài lộc, sự nghiệp và quan hệ xã hội. Zi Wei Dou Shu kết hợp các tư tưởng triết học cổ đại của Trung Quốc, như lý thuyết ngũ hành và yin-yang, cung cấp một trải nghiệm văn hóa độc đáo. Bản đồ số phận của mỗi người đều là duy nhất, và Zi Wei Dou Shu có thể cung cấp một phân tích cá nhân và sâu sắc hơn.",
+  },
+  {
+    title: "Zi Wei Dou Shu chính xác không?",
+    content:
+      "Zi Wei Dou Shu là một lý thuyết số phận truyền thống, và tính chính xác của nó phụ thuộc vào nhiều yếu tố, bao gồm sự chính xác của thời gian sinh và trình độ chuyên nghiệp của người phân tích.",
+  },
+  {
+    title: "Thời gian tạo bản đồ số phận cần bao lâu?",
+    content:
+      "Dịch vụ của chúng tôi được thiết kế để đáp ứng nhanh chóng, bạn có thể nhận được kết quả phân tích bản đồ số phận trong thời gian ngắn nhất.",
+  },
+  {
+    title: "Có thể chia sẻ kết quả bản đồ số phận không?",
+    content:
+      "Tất nhiên, bạn có thể chia sẻ kết quả bản đồ số phận của mình trên mạng xã hội, thảo luận cùng bạn bè.",
+  },
+];
 interface FAQSCollection {
   [key: `FAQS_${string}`]: {
     title: string;
@@ -204,4 +399,11 @@ export const ALL_FAQS: FAQSCollection = {
   FAQS_AR,
   FAQS_ES,
   FAQS_RU,
+  FAQS_DE,
+  FAQS_FR,
+  FAQS_KO,
+  FAQS_NL,
+  FAQS_PL,
+  FAQS_PT,
+  FAQS_VI,
 };
