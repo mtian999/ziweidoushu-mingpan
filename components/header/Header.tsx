@@ -128,7 +128,7 @@ const Header = ({
                   </ul>
                 </nav>
                 <div className="pt-2">
-                  <div className="py-2 font-bold">Links</div>
+                  {/* <div className="py-2 font-bold">Links</div> */}
                   <div className="flex items-center gap-x-5 justify-between">
                     <HeaderLinks />
                     <div className="flex items-center justify-end gap-x-5">
