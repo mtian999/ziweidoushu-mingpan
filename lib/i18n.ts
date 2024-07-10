@@ -17,6 +17,8 @@ export const locales = [
   "pl",
   "pt",
   "vi",
+  "se",
+  "ph",
 ];
 
 export function getHreflangLinks(ignoreLangName: string): string[] {
@@ -52,6 +54,8 @@ export const localeNames: any = {
   pl: "🇵🇱 Polski", //波兰语
   pt: "🇵🇹 Português", //葡萄牙语
   vi: "🇻🇳 Tiếng Việt", //越南语
+  se: "🇸🇪 Svenska",
+  ph: "🇵🇭 Filipino",
 };
 export type LocalesDict = {
   [key: string]: string; // 使用索引签名来表示键值对
@@ -72,6 +76,8 @@ export const localesDict: LocalesDict = {
   pl: "en-US",
   pt: "en-US",
   vi: "vi-VN",
+  se: "en-US",
+  ph: "en-US",
 };
 export const defaultLocale = "en";
 
@@ -98,6 +104,8 @@ const dictionaries: any = {
   pl: () => import("@/locales/pl.json").then((module) => module.default),
   pt: () => import("@/locales/pt.json").then((module) => module.default),
   vi: () => import("@/locales/vi.json").then((module) => module.default),
+  se: () => import("@/locales/se.json").then((module) => module.default),
+  ph: () => import("@/locales/ph.json").then((module) => module.default),
 };
 
 export const getDictionary = async (locale: string) => {
