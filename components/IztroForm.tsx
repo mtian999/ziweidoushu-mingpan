@@ -1,7 +1,6 @@
 "use client";
 
 import { Iztrolabe } from "@/components/react-iztro";
-import { IS_DEV } from "@/lib/env";
 import type { IztroInput } from "@/lib/hooks/iztro-hook/index.type";
 import { defaultLocale, localesDict } from "@/lib/i18n";
 import type { DatePickerProps, FormProps, RadioChangeEvent } from "antd";
@@ -17,9 +16,10 @@ import {
 } from "antd";
 import { saveAs } from "file-saver";
 import { motion } from "framer-motion";
+import { toBlob } from "html-to-image";
 import { CHINESE_TIME, TIME_RANGE } from "iztro/lib/data";
 import { GenderName, setLanguage, t } from "iztro/lib/i18n";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
   const [birthday, setBirthday] = useState<string | string[]>();
@@ -32,25 +32,21 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
   let langName = lang !== "" ? lang : defaultLocale;
   const iztroLang = localesDict[langName];
   iztroLang && setLanguage(iztroLang);
-
+  const ref = useRef<HTMLDivElement>(null);
   const onButtonClick = () => {
+    console.log("onButtonClick");
+    if (ref.current === null) {
+      return;
+    }
     setDownloadiSloading(true);
-    fetch(IS_DEV ? "/api/getZWDSImg" : "/api/getZWDSImgVercel", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify({ birthday, birthTime, gender, lang: langName }),
-    })
-      .then((response) => {
-        return response.blob();
-      })
+
+    toBlob(ref.current, { cacheBust: true })
       .then((blob) => {
         // 处理blob，例如创建一个URL并显示图片
         const currentTime = new Date().getTime();
-        saveAs(blob, `zwds-${currentTime}.png`);
+        saveAs(blob as Blob, `zwds-${currentTime}.png`);
       })
-      .catch(() => {
+      .catch((err) => {
         messageApi.open({
           type: "error",
           content: "图片下载失败",
@@ -60,6 +56,33 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
         setDownloadiSloading(false);
       });
   };
+  // const onButtonClick = () => {
+  //   setDownloadiSloading(true);
+  //   fetch(IS_DEV ? "/api/getZWDSImg" : "/api/getZWDSImgVercel", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json;charset=utf-8",
+  //     },
+  //     body: JSON.stringify({ birthday, birthTime, gender, lang: langName }),
+  //   })
+  //     .then((response) => {
+  //       return response.blob();
+  //     })
+  //     .then((blob) => {
+  //       // 处理blob，例如创建一个URL并显示图片
+  //       const currentTime = new Date().getTime();
+  //       saveAs(blob, `zwds-${currentTime}.png`);
+  //     })
+  //     .catch(() => {
+  //       messageApi.open({
+  //         type: "error",
+  //         content: "图片下载失败",
+  //       });
+  //     })
+  //     .finally(() => {
+  //       setDownloadiSloading(false);
+  //     });
+  // };
   const [form] = Form.useForm();
   const onChange: DatePickerProps["onChange"] = (date, dateString) => {
     console.log(date, dateString);
@@ -107,17 +130,22 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
       <Flex gap="middle" vertical>
         <div
           style={{
-            padding: "15px",
-            backgroundColor: "#fdfdfd",
-            boxShadow: "0 0 25px rgba(0,0,0,0.25)",
-            borderRadius: "5px",
-            boxSizing: "border-box",
             overflowX: "auto",
           }}
           className="w-screen md:w-auto"
         >
           {iztrolabeData ? (
-            <div className="w-[1280px] md:w-full">
+            <div
+              ref={ref}
+              style={{
+                padding: "15px",
+                backgroundColor: "#fdfdfd",
+                boxShadow: "0 0 25px rgba(0,0,0,0.25)",
+                borderRadius: "5px",
+                boxSizing: "border-box",
+              }}
+              className="w-[1280px] md:w-full"
+            >
               <Iztrolabe
                 birthday={iztrolabeData.birthday}
                 birthTime={iztrolabeData.birthTime}
@@ -129,7 +157,15 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
               />
             </div>
           ) : (
-            <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 pt-16 md:pt-24 text-center">
+            <section
+              style={{
+                backgroundColor: "#fdfdfd",
+                boxShadow: "0 0 25px rgba(0,0,0,0.25)",
+                borderRadius: "5px",
+                boxSizing: "border-box",
+              }}
+              className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 pt-16 md:pt-24 text-center"
+            >
               <h2 className="tracking-tight text-slate-700 dark:text-slate-400">
                 {locale.description}
               </h2>
