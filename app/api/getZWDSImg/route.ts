@@ -5,6 +5,7 @@ import puppeteer from "puppeteer";
 
 export async function POST(req: NextRequest) {
   try {
+    return NextResponse.json({ message: "Success" });
     // 启动浏览器
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
