@@ -1,5 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-import { BASE_URL, DEV_BASE_URL } from "@/lib/env";
 import { NextRequest, NextResponse } from "next/server";
 import puppeteer from "puppeteer";
 
@@ -15,9 +14,6 @@ export async function POST(req: NextRequest) {
 
     // 设置页面的视口大小
     await page.setViewport({ width: 1280, height: 960 });
-
-    const currentBaseUrl =
-      process.env.NODE_ENV === "development" ? DEV_BASE_URL : BASE_URL;
 
     // 访问Next.js页面
     await page.goto(

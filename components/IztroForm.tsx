@@ -45,7 +45,7 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
       .then((blob) => {
         // 处理blob，例如创建一个URL并显示图片
         const currentTime = new Date().getTime();
-        saveAs(blob, `zeds-${currentTime}.png`);
+        saveAs(blob, `zwds-${currentTime}.png`);
       })
       .catch(() => {
         messageApi.open({
