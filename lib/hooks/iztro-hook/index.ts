@@ -33,7 +33,6 @@ export function useIztro(input: IztroInput) {
     if (!birthday || date === "invalid date") {
       return undefined;
     }
-    console.log("language", lang);
     const data = astro.withOptions({
       dateStr: birthday,
       timeIndex: birthTime,

@@ -14,7 +14,7 @@ export async function generateMetadata({
 }: {
   params: { lang: string };
 }): Promise<Metadata> {
-  let langName = lang !== "index" ? lang : defaultLocale;
+  let langName = lang !== "" ? lang : defaultLocale;
 
   const dict = await getDictionary(langName);
 
@@ -27,7 +27,7 @@ export default async function LangHome({
   params: { lang: string };
 }) {
   // const langName = (lang && lang[0]) || defaultLocale;
-  let langName = lang !== "index" ? lang : defaultLocale;
+  let langName = lang !== "" ? lang : defaultLocale;
   const dict = await getDictionary(langName);
 
   return (
