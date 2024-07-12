@@ -78,5 +78,9 @@
   },
   "CTAButton": {
     "title": "Gerar Gráfico de Destino do Zi Wei Dou Shu"
+  },
+  "NotFound": {
+    "title": "404 Não Encontrado",
+    "goHome": "ir para casa"
   }
 }

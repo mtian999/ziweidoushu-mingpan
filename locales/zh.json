@@ -73,5 +73,9 @@
   },
   "CTAButton": {
     "title": "紫薇排盘"
+  },
+  "NotFound": {
+    "title": "404 未找到",
+    "goHome": "回到首页"
   }
 }

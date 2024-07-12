@@ -70,5 +70,9 @@
   },
   "CTAButton": {
     "title": "無料の紫微斗数占い"
+  },
+  "NotFound": {
+    "title": "404 Not Found",
+    "goHome": "ホームへ"
   }
 }

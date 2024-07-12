@@ -78,5 +78,9 @@
   },
   "CTAButton": {
     "title": "Affichage du disque de Zi Wei"
+  },
+  "NotFound": {
+    "title": "404 Non Trouvé",
+    "goHome": "Retour à l'accueil"
   }
 }

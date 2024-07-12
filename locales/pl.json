@@ -78,5 +78,9 @@
   },
   "CTAButton": {
     "title": "Wykres przeznaczenia Zi Wei doo shu"
+  },
+  "NotFound": {
+    "title": "404 Not Found",
+    "goHome": "go home"
   }
 }

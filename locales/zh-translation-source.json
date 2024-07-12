@@ -73,5 +73,9 @@
   },
   "CTAButton": {
     "title": "紫薇斗数生成命运图"
+  },
+  "NotFound": {
+    "title": "404 未找到",
+    "goHome": "回到首页"
   }
 }

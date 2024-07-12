@@ -78,5 +78,9 @@
   },
   "CTAButton": {
     "title": "Tạo biểu đồ số phận Zi Wei Dou Shu"
+  },
+  "NotFound": {
+    "title": "404 Not Found",
+    "goHome": "go home"
   }
 }

@@ -78,5 +78,9 @@
   },
   "CTAButton": {
     "title": "Lumikha ng Mapa ng Kapalaran ng Zi Wei Dou Shu"
+  },
+  "NotFound": {
+    "title": "404 Not Found",
+    "goHome": "go home"
   }
 }

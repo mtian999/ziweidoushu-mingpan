@@ -78,5 +78,9 @@
   },
   "CTAButton": {
     "title": "Zi Wei Dou Shu lot diagram genereren"
+  },
+  "NotFound": {
+    "title": "404 Not Found",
+    "goHome": "go home"
   }
 }

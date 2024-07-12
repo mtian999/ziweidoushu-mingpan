@@ -3,7 +3,7 @@ import GoogleAnalytics from "@/app/GoogleAnalytics";
 import { TailwindIndicator } from "@/components/TailwindIndicator";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { siteConfig } from "@/config/site";
-import { defaultLocale, getDictionary } from "@/lib/i18n";
+import { defaultLocale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import "@/styles/loading.css";
@@ -31,7 +31,7 @@ export const viewport: Viewport = {
   themeColor: siteConfig.themeColors,
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
   params: { lang },
 }: {
@@ -39,7 +39,6 @@ export default async function RootLayout({
   params: { lang: string };
 }) {
   let langName = lang !== "" ? lang : defaultLocale;
-  const dict = await getDictionary(langName);
 
   return (
     <html lang={lang || defaultLocale} suppressHydrationWarning>

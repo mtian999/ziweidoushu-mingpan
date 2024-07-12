@@ -78,5 +78,9 @@
   },
   "CTAButton": {
     "title": "紫微斗数 운명 차트 생성"
+  },
+  "NotFound": {
+    "title": "404 Not Found",
+    "goHome": "go home"
   }
 }
