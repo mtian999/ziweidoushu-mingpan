@@ -40,8 +40,8 @@ export function getHreflangLinks(ignoreLangName: string): string[] {
 }
 export const localeNames: any = {
   en: "🇺🇸 English",
-  zh: "🇨🇳 简体",
-  tw: "🇨🇳 繁体",
+  zh: "🇨🇳 简体中文",
+  tw: "🇨🇳 繁体中文",
   ja: "🇯🇵 日本語",
   ar: "🇸🇦 العربية",
   es: "🇪🇸 Español",
