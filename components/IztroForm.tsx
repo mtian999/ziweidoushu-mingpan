@@ -16,42 +16,11 @@ import {
 } from "antd";
 import { saveAs } from "file-saver";
 import { motion } from "framer-motion";
-import { toPng } from "html-to-image";
+import { toBlob } from "html-to-image";
 import { CHINESE_TIME, TIME_RANGE } from "iztro/lib/data";
 import { GenderName, setLanguage, t } from "iztro/lib/i18n";
 import { useEffect, useRef, useState } from "react";
 
-function base64ToBlob(base64: string, mimeType: string) {
-  // 解除Base64编码并去除任何数据URI方案
-  const byteCharacters = atob(base64);
-  const byteNumbers = new Array(byteCharacters.length);
-
-  for (let i = 0; i < byteCharacters.length; i++) {
-    byteNumbers[i] = byteCharacters.charCodeAt(i);
-  }
-
-  // 将整数数组转换为Uint8Array
-  const byteArray = new Uint8Array(byteNumbers);
-
-  // 使用Uint8Array创建Blob对象
-  return new Blob([byteArray], { type: mimeType });
-}
-function dataURItoBlob(dataURI: string) {
-  // 正则表达式匹配data URI的MIME类型和Base64编码部分
-  const mimeMatch = dataURI.match(/^data:([^;]*);base64,/);
-  if (!mimeMatch) {
-    throw new Error("未能解析出MIME类型");
-  }
-
-  // 提取MIME类型
-  const mimeType = mimeMatch[1];
-
-  // 去除data URI的前缀，只保留Base64编码部分
-  const base64 = dataURI.replace(/^data:([^;]*);base64,/g, "");
-
-  // 使用base64ToBlob函数转换Base64到Blob
-  return base64ToBlob(base64, mimeType);
-}
 export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
   const [birthday, setBirthday] = useState<string | string[]>();
   const [birthTime, setBirthTime] = useState<string>();
@@ -87,32 +56,20 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
 
     // 设置一个新的定时器
     const id = setTimeout(() => {
-      toPng(ref.current as HTMLDivElement, { cacheBust: true })
-        .then((dataUrl) => {
-          const blob = dataURItoBlob(dataUrl);
+      toBlob(ref.current as HTMLDivElement)
+        .then((blob) => {
+          // 处理blob，
           const currentTime = new Date().getTime();
-          saveAs(blob as Blob, `zwds-${currentTime}.png`);
+          if (window.saveAs) {
+            window.saveAs(blob as Blob, `zwds-${currentTime}.png`);
+          } else {
+            saveAs(blob as Blob, `zwds-${currentTime}.png`);
+          }
         })
-        .catch((err) => {
-          console.log(err);
-        })
+        .catch((err) => {})
         .finally(() => {
           setDownloadiSloading(false);
         });
-      // toBlob(ref.current as HTMLDivElement)
-      //   .then((blob) => {
-      //     // 处理blob，例如创建一个URL并显示图片
-      //     const currentTime = new Date().getTime();
-      //     if (window.saveAs) {
-      //       window.saveAs(blob as Blob, `zwds-${currentTime}.png`);
-      //     } else {
-      //       saveAs(blob as Blob, `zwds-${currentTime}.png`);
-      //     }
-      //   })
-      //   .catch((err) => {})
-      //   .finally(() => {
-      //     setDownloadiSloading(false);
-      //   });
     }, 1000);
 
     // 保存定时器的ID
