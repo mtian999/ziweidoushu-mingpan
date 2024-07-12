@@ -61,10 +61,11 @@ export async function POST(req: NextRequest) {
     //   width: 1200,
     //   height: 630,
     // });
-    return new Response(screenshotBuffer, {
-      headers,
-    });
-    // return NextResponse.json({ img: screenshotBuffer }, { status: 200 });
+
+    // return new Response(screenshotBuffer, {
+    //   headers,
+    // });
+    return NextResponse.json({ message: "Success" }, { status: 200 });
   } catch (error) {
     return NextResponse.json({ error: Error }, { status: 500 });
   }

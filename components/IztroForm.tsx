@@ -41,7 +41,10 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
       },
       body: JSON.stringify({ birthday, birthTime, gender, lang: langName }),
     })
-      .then((response) => response.blob())
+      .then((response) => {
+        console.log("response", response);
+        return response.blob();
+      })
       .then((blob) => {
         // 处理blob，例如创建一个URL并显示图片
         const currentTime = new Date().getTime();
