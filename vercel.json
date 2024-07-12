@@ -1,0 +1,8 @@
+{
+  "getZWDSImg": [
+    {
+      "path": "/api/getZWDSImg",
+      "schedule": "0 0 * * *"
+    }
+  ]
+}

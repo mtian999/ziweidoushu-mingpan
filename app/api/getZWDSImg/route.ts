@@ -1,4 +1,5 @@
 /* eslint-disable import/prefer-default-export */
+import { BASE_URL, DEV_BASE_URL } from "@/lib/env";
 import { NextRequest, NextResponse } from "next/server";
 import puppeteer from "puppeteer";
 
@@ -15,9 +16,12 @@ export async function POST(req: NextRequest) {
     // 设置页面的视口大小
     await page.setViewport({ width: 1280, height: 960 });
 
+    const currentBaseUrl =
+      process.env.NODE_ENV === "development" ? DEV_BASE_URL : BASE_URL;
+
     // 访问Next.js页面
     await page.goto(
-      `https://fate.maomaoyu.coffee/zwds-preview?birthday=${birthday}&birthTime=${birthTime}&gender=${gender}&lang=${lang}`
+      `${currentBaseUrl}/zwds-preview?birthday=${birthday}&birthTime=${birthTime}&gender=${gender}&lang=${lang}`
     ); // 替换为你的页面路径
     // 等待页面渲染完成
     await page.waitForSelector("body"); // 替换为你页面中的选择器
@@ -61,11 +65,10 @@ export async function POST(req: NextRequest) {
     //   width: 1200,
     //   height: 630,
     // });
-
-    // return new Response(screenshotBuffer, {
-    //   headers,
-    // });
-    return NextResponse.json({ message: "Success" }, { status: 200 });
+    return new Response(screenshotBuffer, {
+      headers,
+    });
+    // return NextResponse.json({ img: screenshotBuffer }, { status: 200 });
   } catch (error) {
     return NextResponse.json({ error: Error }, { status: 500 });
   }
