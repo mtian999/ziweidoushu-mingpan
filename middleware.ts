@@ -1,18 +1,16 @@
-import { defaultLocale, locales } from "./lib/i18n";
+import { type NextRequest } from "next/server";
 
-import { NextRequest } from "next/server";
+import intlMiddleware from "./middlewares/intlMiddleware";
 
-export function middleware(request: NextRequest) {
+// 不需要intlMiddleware管理国际化的页面请求
+const ignorePath = ["/zwds-preview"];
+
+export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  const isExit = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  );
+  if (ignorePath.includes(pathname)) return;
 
-  if (isExit) return;
-
-  request.nextUrl.pathname = `/${defaultLocale}/${request.nextUrl.pathname}`;
-  return Response.redirect(request.nextUrl);
+  return intlMiddleware(request);
 }
 
 export const config = {

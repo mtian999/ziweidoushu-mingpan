@@ -9,6 +9,7 @@ import "@/styles/globals.css";
 import "@/styles/loading.css";
 import { Analytics } from "@vercel/analytics/react";
 import { Viewport } from "next";
+import { NextIntlClientProvider } from "next-intl";
 
 // export const fontSans = FontSans({
 //   subsets: ["latin"],
@@ -44,15 +45,17 @@ export default async function RootLayout({
     <html lang={lang || defaultLocale} suppressHydrationWarning>
       <head />
       <body className={cn("min-h-screen bg-background font-sans antialiased")}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme={siteConfig.nextThemeColor}
-          enableSystem
-        >
-          {children}
-          <Analytics />
-          <TailwindIndicator />
-        </ThemeProvider>
+        <NextIntlClientProvider locale={langName}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme={siteConfig.nextThemeColor}
+            enableSystem
+          >
+            {children}
+            <Analytics />
+            <TailwindIndicator />
+          </ThemeProvider>
+        </NextIntlClientProvider>
         {process.env.NODE_ENV === "development" ? (
           <></>
         ) : (

@@ -1,4 +1,5 @@
 "use client";
+import { usePathname, useRouter } from "@/app/navigation";
 import {
   Select,
   SelectContent,
@@ -6,35 +7,36 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useParams, usePathname, useRouter } from "next/navigation";
-
-import { defaultLocale, localeNames } from "@/lib/i18n";
+import { localeNames } from "@/lib/i18n";
+import { useLocale } from "next-intl";
+import { useState } from "react";
 
 export const LangSwitcher = () => {
-  const params = useParams();
-  const lang = params.lang;
-
-  // const lang = (params.lang && params.lang[0]) || defaultLocale;
-  let langName = (lang !== "" ? lang : defaultLocale) as string;
-  const router = useRouter();
+  const currentLocale = useLocale();
   const pathname = usePathname();
+  const router = useRouter();
+
+  const [localeVal, setLocaleVal] = useState(currentLocale);
+
   const handleSwitchLanguage = (value: string) => {
-    if (pathname !== "/") {
-      const reg = new RegExp(`${lang}`);
-      const newPath = pathname.replace(reg, value);
-      router.replace(newPath);
-      return;
-    } else {
-      if (value === defaultLocale) {
-        router.push("/");
-        return;
-      }
-    }
-    router.replace(value);
+    // if (pathname !== "/") {
+    //   const reg = new RegExp(`${lang}`);
+    //   const newPath = pathname.replace(reg, value);
+    //   router.replace(newPath);
+    //   return;
+    // } else {
+    //   if (value === defaultLocale) {
+    //     router.push("/");
+    //     return;
+    //   }
+    // }
+    // router.replace(value);
+    setLocaleVal(value);
+    router.replace(pathname, { locale: value });
   };
 
   return (
-    <Select value={langName} onValueChange={handleSwitchLanguage}>
+    <Select value={localeVal} onValueChange={handleSwitchLanguage}>
       <SelectTrigger className="w-fit">
         <SelectValue placeholder="Language" />
       </SelectTrigger>

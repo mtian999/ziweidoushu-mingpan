@@ -1,13 +1,32 @@
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: "/",
-        destination: "/en", // 将根URL重定向到 /en
-      },
-    ];
+  env: {
+    NEXT_BASE_API: process.env.NEXT_BASE_API,
   },
+  logging: {
+    fetches: {
+      fullUrl: process.env.NODE_ENV === "development",
+    },
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "img.artiversehub.ai",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
+  productionBrowserSourceMaps: false,
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
