@@ -61,9 +61,9 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
           // 处理blob，例如创建一个URL并显示图片
           const currentTime = new Date().getTime();
           if (window.saveAs) {
-            window.saveAs(blob as Blob, `zwds-${currentTime}.png`);
+            window.saveAs(blob as Blob);
           } else {
-            saveAs(blob as Blob, `zwds-${currentTime}.png`);
+            saveAs(blob as Blob);
           }
         })
         .catch((err) => {})
