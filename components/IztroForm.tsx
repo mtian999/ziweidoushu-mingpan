@@ -19,7 +19,7 @@ import { motion } from "framer-motion";
 import { toBlob } from "html-to-image";
 import { CHINESE_TIME, TIME_RANGE } from "iztro/lib/data";
 import { GenderName, setLanguage, t } from "iztro/lib/i18n";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
   const [birthday, setBirthday] = useState<string | string[]>();
@@ -28,37 +28,52 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
   const [iztrolabeData, setIztrolabeData] = useState<IztroInput>();
   const [downloadiSloading, setDownloadiSloading] = useState<Boolean>(false);
   const [messageApi, contextHolder] = message.useMessage();
+  const [timerId, setTimerId] = useState<any>();
 
   let langName = lang !== "" ? lang : defaultLocale;
   const iztroLang = localesDict[langName];
   iztroLang && setLanguage(iztroLang);
+
+  useEffect(() => {
+    // 组件卸载时清除定时器
+    return () => {
+      if (timerId) {
+        clearTimeout(timerId);
+      }
+    };
+  }, [timerId]);
   const ref = useRef<HTMLDivElement>(null);
+
   const onButtonClick = () => {
-    console.log("onButtonClick");
     if (ref.current === null) {
       return;
     }
     setDownloadiSloading(true);
+    // 清除之前的定时器
+    if (timerId) {
+      clearTimeout(timerId);
+    }
 
-    toBlob(ref.current, { cacheBust: true })
-      .then((blob) => {
-        // 处理blob，例如创建一个URL并显示图片
-        const currentTime = new Date().getTime();
-        if (window.saveAs) {
-          window.saveAs(blob as Blob, `zwds-${currentTime}.png`);
-        } else {
-          saveAs(blob as Blob, `zwds-${currentTime}.png`);
-        }
-      })
-      .catch((err) => {
-        messageApi.open({
-          type: "error",
-          content: "图片下载失败",
+    // 设置一个新的定时器
+    const id = setTimeout(() => {
+      toBlob(ref.current as HTMLDivElement)
+        .then((blob) => {
+          // 处理blob，例如创建一个URL并显示图片
+          const currentTime = new Date().getTime();
+          if (window.saveAs) {
+            window.saveAs(blob as Blob, `zwds-${currentTime}.png`);
+          } else {
+            saveAs(blob as Blob, `zwds-${currentTime}.png`);
+          }
+        })
+        .catch((err) => {})
+        .finally(() => {
+          setDownloadiSloading(false);
         });
-      })
-      .finally(() => {
-        setDownloadiSloading(false);
-      });
+    }, 1000);
+
+    // 保存定时器的ID
+    setTimerId(id);
   };
   // const onButtonClick = () => {
   //   setDownloadiSloading(true);
