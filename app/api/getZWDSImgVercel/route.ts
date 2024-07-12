@@ -1,10 +1,16 @@
 /* eslint-disable import/prefer-default-export */
 import { BASE_URL, DEV_BASE_URL, IS_DEV } from "@/lib/env";
+import chromium from "chrome-aws-lambda";
 import { NextRequest, NextResponse } from "next/server";
-import puppeteer from "puppeteer";
 
 async function getBrowser() {
-  return await puppeteer.launch();
+  return await chromium.puppeteer.launch({
+    args: chromium.args,
+    defaultViewport: chromium.defaultViewport,
+    executablePath: await chromium.executablePath,
+    headless: chromium.headless,
+    ignoreHTTPSErrors: true,
+  });
 }
 
 export async function POST(req: NextRequest) {

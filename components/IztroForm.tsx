@@ -1,6 +1,7 @@
 "use client";
 
 import { Iztrolabe } from "@/components/react-iztro";
+import { IS_DEV } from "@/lib/env";
 import type { IztroInput } from "@/lib/hooks/iztro-hook/index.type";
 import { defaultLocale, localesDict } from "@/lib/i18n";
 import type { DatePickerProps, FormProps, RadioChangeEvent } from "antd";
@@ -34,7 +35,7 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
 
   const onButtonClick = () => {
     setDownloadiSloading(true);
-    fetch("/api/getZWDSImg", {
+    fetch(IS_DEV ? "/api/getZWDSImg" : "/api/getZWDSImgVercel", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -42,7 +43,6 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
       body: JSON.stringify({ birthday, birthTime, gender, lang: langName }),
     })
       .then((response) => {
-        console.log("response", response);
         return response.blob();
       })
       .then((blob) => {
