@@ -128,12 +128,7 @@ export function IztroForm({
   //     });
   // };
   const [form] = Form.useForm();
-  useEffect(() => {
-    // 设置初始值;
-    form.setFieldsValue({
-      birthdayType,
-    });
-  });
+
   const dataPlaceholder = `example ${new Date().getFullYear()}0101`;
   const isShowBirthdayType = ["zh", "tw"].includes(langName);
   const onBirthdayTypeChange = ({
@@ -147,13 +142,25 @@ export function IztroForm({
   const onChange: DatePickerProps["onChange"] = (date, dateString) => {
     setBirthday(dateString as string);
   };
+
+  const validateBirthday = ({}) => ({
+    validator(_, value: string) {
+      if (value === "") {
+        return Promise.resolve();
+      }
+      const isValid = dayjs(value, "YYYYMMDD", true).isValid();
+      if (isValid) {
+        return Promise.resolve();
+      }
+      return Promise.reject("Invalid Date");
+    },
+  });
+
   const onBirthdayChange = ({
     target: { value: birthday },
   }: React.ChangeEvent<HTMLInputElement>) => {
     const formatBirthday = dayjs(birthday, "YYYYMMDD").format("YYYY-MM-DD");
-    if (formatBirthday !== "Invalid Date") {
-      setBirthday(formatBirthday);
-    }
+    setBirthday(formatBirthday);
   };
   const onGenderChange = ({
     target: { value: genderVal },
@@ -163,14 +170,24 @@ export function IztroForm({
   const onBirthTimeChange = (value: string) => {
     setBirthTime(value);
   };
-  const onFinish: FormProps<IztroInput>["onFinish"] = (values) => {
-    const birthTimeNum: number = Number(birthTime);
-    setIztrolabeData({
-      birthday: birthday as string,
-      birthTime: birthTimeNum,
-      gender: gender as GenderName,
-      birthdayType: birthdayType,
-    });
+
+  const onFinish: FormProps<IztroInput>["onFinish"] = async (values) => {
+    try {
+      await form.validateFields();
+      // 表单验证通过, 执行提交逻辑
+      const birthTimeNum: number = Number(birthTime);
+      // if (formatBirthday !== "Invalid Date") {
+      //   setBirthday(formatBirthday);
+      // }
+      setIztrolabeData({
+        birthday: birthday as string,
+        birthTime: birthTimeNum,
+        gender: gender as GenderName,
+        birthdayType: birthdayType,
+      });
+    } catch (errorInfo) {
+      console.log("Failed:", errorInfo);
+    }
   };
 
   const onFinishFailed: FormProps<IztroInput>["onFinishFailed"] = (
@@ -256,6 +273,7 @@ export function IztroForm({
               style={{ background: "#fff" }}
               labelAlign="right"
               form={form}
+              initialValues={{ birthdayType }}
               onFinish={onFinish}
               onFinishFailed={onFinishFailed}
             >
@@ -267,11 +285,16 @@ export function IztroForm({
                   rules={[{ required: true, message: "Please Select!" }]}
                 >
                   <Radio.Group
+                    className="w-full md:w-auto text-center"
                     onChange={onBirthdayTypeChange}
                     value={birthdayType}
                   >
-                    <Radio.Button value="solar">阳历</Radio.Button>
-                    <Radio.Button value="lunar">农历</Radio.Button>
+                    <Radio.Button className="w-3/6 md:w-auto" value="solar">
+                      阳历
+                    </Radio.Button>
+                    <Radio.Button className="w-3/6 md:w-auto" value="lunar">
+                      农历
+                    </Radio.Button>
                   </Radio.Group>
                 </Form.Item>
               )}
@@ -294,7 +317,10 @@ export function IztroForm({
                   className="w-full md:w-[380px]"
                   name="birthday"
                   label={localeDict.form.birthday}
-                  rules={[{ required: true, message: "Please Select!" }]}
+                  rules={[
+                    { required: true, message: "Please Select!" },
+                    validateBirthday,
+                  ]}
                 >
                   <Input
                     placeholder={dataPlaceholder}
@@ -322,13 +348,25 @@ export function IztroForm({
                 />
               </Form.Item>
               <Form.Item
+                className="w-full md:w-auto"
                 name="gender"
                 label={localeDict.form.gender}
                 rules={[{ required: true, message: "Please Select!" }]}
               >
-                <Radio.Group onChange={onGenderChange} value={gender}>
-                  <Radio value={t("male")}>{t("male")}</Radio>
-                  <Radio value={t("female")}>{t("female")}</Radio>
+                <Radio.Group
+                  className="w-full md:w-auto flex md:inline-block"
+                  onChange={onGenderChange}
+                  value={gender}
+                >
+                  <Radio className="justify-center flex-auto" value={t("male")}>
+                    {t("male")}
+                  </Radio>
+                  <Radio
+                    className="justify-center flex-auto"
+                    value={t("female")}
+                  >
+                    {t("female")}
+                  </Radio>
                 </Radio.Group>
               </Form.Item>
               <Form.Item>
