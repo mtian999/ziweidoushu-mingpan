@@ -3,6 +3,7 @@
     "h1": "紫微斗數排盤",
     "description": "輸入資訊點擊「生成」按鈕獲取您的專屬星座圖",
     "form": {
+      "birthdayType": "日期類型",
       "birthday": "生日",
       "birthTime": "出生時間",
       "gender": "性別",

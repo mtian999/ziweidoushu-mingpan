@@ -3,6 +3,7 @@
     "h1": "紫微斗数生成命运图",
     "description": "输入信息点击`生成`按钮获取专属紫薇斗数命运图",
     "form": {
+      "birthdayType": "日期类型",
       "birthday": "生日",
       "birthTime": "时辰",
       "gender": "性别",

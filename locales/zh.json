@@ -3,6 +3,7 @@
     "h1": "紫微斗数排盘",
     "description": "输入信息点击`生成`按钮获取专属紫薇命盘",
     "form": {
+      "birthdayType": "日期类型",
       "birthday": "生日",
       "birthTime": "时辰",
       "gender": "性别",

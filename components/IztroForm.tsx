@@ -15,10 +15,12 @@ import {
   DatePicker,
   Flex,
   Form,
+  Input,
   Radio,
   Select,
   message,
 } from "antd";
+import dayjs from "dayjs";
 import { saveAs } from "file-saver";
 import { motion } from "framer-motion";
 import { toBlob } from "html-to-image";
@@ -35,23 +37,25 @@ export function IztroForm({
   localeDict: any;
   lang: string;
 }) {
-  const [birthday, setBirthday] = useState<string | string[]>();
+  const [birthdayType, setBirthdayType] = useState<"lunar" | "solar">("solar");
+  const [birthday, setBirthday] = useState<string>();
   const [birthTime, setBirthTime] = useState<string>();
   const [gender, setGender] = useState<GenderName>();
   const [iztrolabeData, setIztrolabeData] = useState<IztroInput>();
   const [downloadiSloading, setDownloadiSloading] = useState<Boolean>(false);
   const [messageApi, contextHolder] = message.useMessage();
   const [timerId, setTimerId] = useState<any>();
+  const [datePickerLocale, setDatePickerLocale] = useState<Locale>();
 
   let langName = lang !== "" ? lang : defaultLocale;
   const iztroLang = localesDict[langName];
+  // 紫微斗数设置语言
   iztroLang && setLanguage(iztroLang);
 
-  const [locale, setLocal] = useState<Locale>();
   //加载日期选择器的国际化
   useEffect(() => {
     getDataPickerLocal(langName).then((data) => {
-      setLocal(data[0]);
+      setDatePickerLocale(data[0]);
     });
   }, [langName]);
 
@@ -124,8 +128,32 @@ export function IztroForm({
   //     });
   // };
   const [form] = Form.useForm();
+  useEffect(() => {
+    // 设置初始值;
+    form.setFieldsValue({
+      birthdayType,
+    });
+  });
+  const dataPlaceholder = `example ${new Date().getFullYear()}0101`;
+  const isShowBirthdayType = ["zh", "tw"].includes(langName);
+  const onBirthdayTypeChange = ({
+    target: { value: birthdayType },
+  }: RadioChangeEvent) => {
+    setBirthdayType(birthdayType);
+    form.setFieldsValue({
+      birthday: "",
+    });
+  };
   const onChange: DatePickerProps["onChange"] = (date, dateString) => {
-    setBirthday(dateString);
+    setBirthday(dateString as string);
+  };
+  const onBirthdayChange = ({
+    target: { value: birthday },
+  }: React.ChangeEvent<HTMLInputElement>) => {
+    const formatBirthday = dayjs(birthday, "YYYYMMDD").format("YYYY-MM-DD");
+    if (formatBirthday !== "Invalid Date") {
+      setBirthday(formatBirthday);
+    }
   };
   const onGenderChange = ({
     target: { value: genderVal },
@@ -141,7 +169,7 @@ export function IztroForm({
       birthday: birthday as string,
       birthTime: birthTimeNum,
       gender: gender as GenderName,
-      birthdayType: "solar",
+      birthdayType: birthdayType,
     });
   };
 
@@ -169,9 +197,12 @@ export function IztroForm({
       <Flex gap="middle" vertical>
         <div
           style={{
-            overflowX: "auto",
+            backgroundColor: "#fdfdfd",
+            boxShadow: "0 0 25px rgba(0,0,0,0.25)",
+            borderRadius: "5px",
+            boxSizing: "border-box",
           }}
-          className="w-screen md:w-auto"
+          className={`w-screen md:w-auto ${iztrolabeData && "overflow-x-auto"}`}
         >
           {iztrolabeData ? (
             <div
@@ -179,7 +210,6 @@ export function IztroForm({
               style={{
                 padding: "15px",
                 backgroundColor: "#fdfdfd",
-                boxShadow: "0 0 25px rgba(0,0,0,0.25)",
                 borderRadius: "5px",
                 boxSizing: "border-box",
               }}
@@ -188,7 +218,7 @@ export function IztroForm({
               <Iztrolabe
                 birthday={iztrolabeData.birthday}
                 birthTime={iztrolabeData.birthTime}
-                birthdayType="solar"
+                birthdayType={iztrolabeData.birthdayType}
                 gender={iztrolabeData.gender}
                 horoscopeDate={new Date()} // 新增参数，设置运限日期【可选，默认为当前时间】
                 horoscopeHour={1} // 新增参数，设置流时时辰的索引【可选，默认会获取 horoscopeDate 时间】
@@ -221,77 +251,109 @@ export function IztroForm({
             boxSizing: "border-box",
           }}
         >
-          <Form
-            style={{ background: "#fff" }}
-            labelAlign="right"
-            form={form}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-          >
-            <Form.Item
-              className="w-full md:w-[380px]"
-              name="birthday"
-              label={localeDict.form.birthday}
-              rules={[{ required: true, message: "Please Select!" }]}
+          <ConfigProvider locale={datePickerLocale}>
+            <Form
+              style={{ background: "#fff" }}
+              labelAlign="right"
+              form={form}
+              onFinish={onFinish}
+              onFinishFailed={onFinishFailed}
             >
-              <ConfigProvider locale={locale}>
-                <DatePicker
-                  className="w-full"
-                  inputReadOnly={true}
-                  onChange={onChange}
-                />
-              </ConfigProvider>
-            </Form.Item>
-            <Form.Item
-              className="w-full md:w-[380px]"
-              name="birthTime"
-              label={localeDict.form.birthTime}
-              rules={[{ required: true, message: "Please Select!" }]}
-            >
-              <Select
-                value={birthTime}
-                placeholder="Select time"
-                options={CHINESE_TIME.map((timeKey, idx) => {
-                  return {
-                    value: idx,
-                    label: `${t(timeKey)} ${TIME_RANGE[idx]}`,
-                  };
-                })}
-                onChange={onBirthTimeChange}
-              />
-            </Form.Item>
-            <Form.Item
-              name="gender"
-              label={localeDict.form.gender}
-              rules={[{ required: true, message: "Please Select!" }]}
-            >
-              <Radio.Group onChange={onGenderChange} value={gender}>
-                <Radio value={t("male")}>{t("male")}</Radio>
-                <Radio value={t("female")}>{t("female")}</Radio>
-              </Radio.Group>
-            </Form.Item>
-            <Form.Item>
-              <ConfigProvider
-                theme={{
-                  components: {},
-                }}
-              >
-                <Flex gap="middle" wrap="wrap">
-                  <Button className="w-full md:w-auto" htmlType="submit">
-                    {localeDict.form.create}
-                  </Button>
-                  <Button
-                    className="w-full md:w-auto"
-                    disabled={!iztrolabeData}
-                    loading={downloadiSloading as boolean}
-                    onClick={onButtonClick}
+              {isShowBirthdayType && (
+                <Form.Item
+                  className="w-full md:w-[380px]"
+                  name="birthdayType"
+                  label={localeDict.form.birthdayType}
+                  rules={[{ required: true, message: "Please Select!" }]}
+                >
+                  <Radio.Group
+                    onChange={onBirthdayTypeChange}
+                    value={birthdayType}
                   >
-                    {localeDict.form.download}
-                  </Button>
-                </Flex>
-              </ConfigProvider>
-            </Form.Item>
-          </Form>
+                    <Radio.Button value="solar">阳历</Radio.Button>
+                    <Radio.Button value="lunar">农历</Radio.Button>
+                  </Radio.Group>
+                </Form.Item>
+              )}
+
+              {birthdayType === "solar" ? (
+                <Form.Item
+                  className="w-full md:w-[380px]"
+                  name="birthday"
+                  label={localeDict.form.birthday}
+                  rules={[{ required: true, message: "Please Select!" }]}
+                >
+                  <DatePicker
+                    className="w-full"
+                    inputReadOnly={true}
+                    onChange={onChange}
+                  />
+                </Form.Item>
+              ) : (
+                <Form.Item
+                  className="w-full md:w-[380px]"
+                  name="birthday"
+                  label={localeDict.form.birthday}
+                  rules={[{ required: true, message: "Please Select!" }]}
+                >
+                  <Input
+                    placeholder={dataPlaceholder}
+                    onChange={onBirthdayChange}
+                  />
+                </Form.Item>
+              )}
+
+              <Form.Item
+                className="w-full md:w-[380px]"
+                name="birthTime"
+                label={localeDict.form.birthTime}
+                rules={[{ required: true, message: "Please Select!" }]}
+              >
+                <Select
+                  value={birthTime}
+                  placeholder="Select time"
+                  options={CHINESE_TIME.map((timeKey, idx) => {
+                    return {
+                      value: idx,
+                      label: `${t(timeKey)} ${TIME_RANGE[idx]}`,
+                    };
+                  })}
+                  onChange={onBirthTimeChange}
+                />
+              </Form.Item>
+              <Form.Item
+                name="gender"
+                label={localeDict.form.gender}
+                rules={[{ required: true, message: "Please Select!" }]}
+              >
+                <Radio.Group onChange={onGenderChange} value={gender}>
+                  <Radio value={t("male")}>{t("male")}</Radio>
+                  <Radio value={t("female")}>{t("female")}</Radio>
+                </Radio.Group>
+              </Form.Item>
+              <Form.Item>
+                <ConfigProvider
+                  theme={{
+                    components: {},
+                  }}
+                >
+                  <Flex gap="middle" wrap="wrap">
+                    <Button className="w-full md:w-auto" htmlType="submit">
+                      {localeDict.form.create}
+                    </Button>
+                    <Button
+                      className="w-full md:w-auto"
+                      disabled={!iztrolabeData}
+                      loading={downloadiSloading as boolean}
+                      onClick={onButtonClick}
+                    >
+                      {localeDict.form.download}
+                    </Button>
+                  </Flex>
+                </ConfigProvider>
+              </Form.Item>
+            </Form>
+          </ConfigProvider>
         </div>
       </Flex>
     </motion.div>
