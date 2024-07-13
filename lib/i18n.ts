@@ -1,4 +1,5 @@
 import { match } from "@formatjs/intl-localematcher";
+import dayjs from "dayjs";
 import Negotiator from "negotiator";
 
 export const locales = [
@@ -117,4 +118,102 @@ export const getDictionary = async (locale: string) => {
   }
 
   return dictionaries[locale]();
+};
+
+const DataPickerLocalesDict = [
+  {
+    key: "en",
+    antd: "en_US",
+    dayjs: "en",
+  },
+  {
+    key: "zh",
+    antd: "zh_CN",
+    dayjs: "zh",
+  },
+  {
+    key: "tw",
+    antd: "zh_TW",
+    dayjs: "zh-tw",
+  },
+  {
+    key: "ja",
+    antd: "ja_JP",
+    dayjs: "ja",
+  },
+  {
+    key: "ar",
+    antd: "ar_EG",
+    dayjs: "ar",
+  },
+  {
+    key: "es",
+    antd: "es_ES",
+    dayjs: "es",
+  },
+  {
+    key: "ru",
+    antd: "ru_RU",
+    dayjs: "ru",
+  },
+  {
+    key: "de",
+    antd: "de_DE",
+    dayjs: "de",
+  },
+  {
+    key: "fr",
+    antd: "fr_FR",
+    dayjs: "fr",
+  },
+  {
+    key: "ko",
+    antd: "ko_KR",
+    dayjs: "ko",
+  },
+  {
+    key: "nl",
+    antd: "nl_NL",
+    dayjs: "nl",
+  },
+  {
+    key: "pl",
+    antd: "pl_PL",
+    dayjs: "pl",
+  },
+  {
+    key: "pt",
+    antd: "pt_PT",
+    dayjs: "pt",
+  },
+  {
+    key: "vi",
+    antd: "vi_VN",
+    dayjs: "vi",
+  },
+  {
+    key: "se",
+    antd: "sv_SE",
+    dayjs: "se",
+  },
+  {
+    key: "ph",
+    antd: "en_US",
+    dayjs: "tl-ph",
+  },
+];
+export const getDataPickerLocal = (locale: string) => {
+  const targetLocal = DataPickerLocalesDict.find((item) => {
+    return item.key === locale;
+  }) || {
+    key: "en",
+    antd: "en_US",
+    dayjs: "en",
+  };
+  return Promise.all([
+    import(`antd/locale/${targetLocal.antd}`).then((module) => module.default),
+    import(`dayjs/locale/${targetLocal.dayjs}`).then(() => {
+      dayjs.locale(targetLocal.dayjs);
+    }),
+  ]);
 };

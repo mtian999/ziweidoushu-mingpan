@@ -30,7 +30,7 @@ export default async function Page({
       <h1 className="tracking-tight pb-4 md:pb-16 text-center text-slate-700 dark:text-slate-400">
         {dict.Fate.h1}
       </h1>
-      <IztroForm locale={dict.Fate} lang={lang} />
+      <IztroForm localeDict={dict.Fate} lang={lang} />
     </>
   );
 }

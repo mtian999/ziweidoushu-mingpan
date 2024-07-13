@@ -2,8 +2,13 @@
 
 import { Iztrolabe } from "@/components/react-iztro";
 import type { IztroInput } from "@/lib/hooks/iztro-hook/index.type";
-import { defaultLocale, localesDict } from "@/lib/i18n";
-import type { DatePickerProps, FormProps, RadioChangeEvent } from "antd";
+import { defaultLocale, getDataPickerLocal, localesDict } from "@/lib/i18n";
+import type {
+  ConfigProviderProps,
+  DatePickerProps,
+  FormProps,
+  RadioChangeEvent,
+} from "antd";
 import {
   Button,
   ConfigProvider,
@@ -21,7 +26,15 @@ import { CHINESE_TIME, TIME_RANGE } from "iztro/lib/data";
 import { GenderName, setLanguage, t } from "iztro/lib/i18n";
 import { useEffect, useRef, useState } from "react";
 
-export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
+type Locale = ConfigProviderProps["locale"];
+
+export function IztroForm({
+  localeDict,
+  lang,
+}: {
+  localeDict: any;
+  lang: string;
+}) {
   const [birthday, setBirthday] = useState<string | string[]>();
   const [birthTime, setBirthTime] = useState<string>();
   const [gender, setGender] = useState<GenderName>();
@@ -33,6 +46,14 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
   let langName = lang !== "" ? lang : defaultLocale;
   const iztroLang = localesDict[langName];
   iztroLang && setLanguage(iztroLang);
+
+  const [locale, setLocal] = useState<Locale>();
+  //加载日期选择器的国际化
+  useEffect(() => {
+    getDataPickerLocal(langName).then((data) => {
+      setLocal(data[0]);
+    });
+  }, [langName]);
 
   useEffect(() => {
     // 组件卸载时清除定时器
@@ -185,7 +206,7 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
               className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 pt-16 md:pt-24 text-center"
             >
               <h2 className="tracking-tight text-slate-700 dark:text-slate-400">
-                {locale.description}
+                {localeDict.description}
               </h2>
             </section>
           )}
@@ -210,15 +231,21 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
             <Form.Item
               className="w-full md:w-[380px]"
               name="birthday"
-              label={locale.form.birthday}
+              label={localeDict.form.birthday}
               rules={[{ required: true, message: "Please Select!" }]}
             >
-              <DatePicker className="w-full" onChange={onChange} />
+              <ConfigProvider locale={locale}>
+                <DatePicker
+                  className="w-full"
+                  inputReadOnly={true}
+                  onChange={onChange}
+                />
+              </ConfigProvider>
             </Form.Item>
             <Form.Item
               className="w-full md:w-[380px]"
               name="birthTime"
-              label={locale.form.birthTime}
+              label={localeDict.form.birthTime}
               rules={[{ required: true, message: "Please Select!" }]}
             >
               <Select
@@ -235,7 +262,7 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
             </Form.Item>
             <Form.Item
               name="gender"
-              label={locale.form.gender}
+              label={localeDict.form.gender}
               rules={[{ required: true, message: "Please Select!" }]}
             >
               <Radio.Group onChange={onGenderChange} value={gender}>
@@ -251,7 +278,7 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
               >
                 <Flex gap="middle" wrap="wrap">
                   <Button className="w-full md:w-auto" htmlType="submit">
-                    {locale.form.create}
+                    {localeDict.form.create}
                   </Button>
                   <Button
                     className="w-full md:w-auto"
@@ -259,7 +286,7 @@ export function IztroForm({ locale, lang }: { locale: any; lang: string }) {
                     loading={downloadiSloading as boolean}
                     onClick={onButtonClick}
                   >
-                    {locale.form.download}
+                    {localeDict.form.download}
                   </Button>
                 </Flex>
               </ConfigProvider>
