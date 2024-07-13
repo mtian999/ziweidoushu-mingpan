@@ -144,7 +144,7 @@ export function IztroForm({
   };
 
   const validateBirthday = ({}) => ({
-    validator(_, value: string) {
+    validator(_: any, value: string) {
       if (value === "") {
         return Promise.resolve();
       }
