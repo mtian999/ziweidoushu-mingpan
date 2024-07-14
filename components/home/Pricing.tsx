@@ -13,7 +13,9 @@ import {
 
 import { siteConfig } from "@/config/site";
 import { ALL_TIERS } from "@/config/tiers";
+import { TiersEnum } from "@/types/pricing";
 import { FaCheck } from "react-icons/fa";
+import { MdOutlineTimelapse } from "react-icons/md";
 import { RoughNotation } from "react-rough-notation";
 
 const Pricing = ({
@@ -64,7 +66,11 @@ const Pricing = ({
               <ul className="flex flex-col gap-2">
                 {tier.features?.map((feature) => (
                   <li key={feature} className="flex items-center gap-2">
-                    <FaCheck className="text-blue-500" />
+                    {TiersEnum.Free === tier.key ? (
+                      <FaCheck className="text-blue-500" />
+                    ) : (
+                      <MdOutlineTimelapse color="#9370DB" />
+                    )}
                     <p className="text-default-500">{feature}</p>
                   </li>
                 ))}
