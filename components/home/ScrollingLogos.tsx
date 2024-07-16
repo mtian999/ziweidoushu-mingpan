@@ -1,7 +1,6 @@
 "use client";
-import { LOGOS } from "@/config/logos";
+import { IconSvg, LOGOS } from "@/config/logos";
 import { useTheme } from "next-themes";
-import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 const ScrollingLogos = () => {
@@ -11,18 +10,12 @@ const ScrollingLogos = () => {
       <Marquee direction="left" autoFill pauseOnHover>
         {LOGOS.map((image, index) => (
           <div className="mx-6 text-gray-500" key={index}>
-            <Image
-              src={image.image}
-              alt={image.name}
-              width={50}
-              height={50}
-              style={{
-                objectFit: "cover", // cover, contain, none
-              }}
+            <IconSvg
+              name={image.name}
               className={`${
                 theme === "dark" ? "filter dark:invert grayscale" : ""
-              } hover:filter-none transition-all duration-300 cursor-pointer text-gray-500`}
-            />
+              } h-[50px] w-[50px] hover:filter-none transition-all duration-300 cursor-pointer text-gray-500`}
+            ></IconSvg>
           </div>
         ))}
       </Marquee>

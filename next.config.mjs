@@ -4,6 +4,17 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  webpack: (config, { isServer }) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: [
+        {
+          loader: "@svgr/webpack",
+        },
+      ],
+    });
+    return config;
+  },
   env: {
     NEXT_BASE_API: process.env.NEXT_BASE_API,
   },
