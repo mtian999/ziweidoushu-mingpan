@@ -283,7 +283,6 @@ export function IztroForm({
         className={`${theme === "dark" ? "filter dark:invert" : ""} w-full`}
       >
         <div
-          ref={ref}
           style={{
             boxShadow: "0 0 25px rgba(0,0,0,0.25)",
             borderRadius: "5px",
@@ -295,6 +294,7 @@ export function IztroForm({
         >
           {iztrolabeData ? (
             <div
+              ref={ref}
               style={{
                 padding: "15px",
                 borderRadius: "5px",
