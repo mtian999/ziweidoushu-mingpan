@@ -302,7 +302,7 @@ export function IztroForm({
               }}
               className="w-[1280px] md:w-full"
             >
-              {/* <motion.div
+              <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
@@ -315,17 +315,17 @@ export function IztroForm({
                     // restDelta: 0.001, // if spring
                   },
                 }}
-              > */}
-              <Iztrolabe
-                birthday={iztrolabeData.birthday}
-                birthTime={iztrolabeData.birthTime}
-                birthdayType={iztrolabeData.birthdayType}
-                gender={iztrolabeData.gender}
-                horoscopeDate={new Date()} // 新增参数，设置运限日期【可选，默认为当前时间】
-                horoscopeHour={1} // 新增参数，设置流时时辰的索引【可选，默认会获取 horoscopeDate 时间】
-                lang={iztroLang}
-              />
-              {/* </motion.div> */}
+              >
+                <Iztrolabe
+                  birthday={iztrolabeData.birthday}
+                  birthTime={iztrolabeData.birthTime}
+                  birthdayType={iztrolabeData.birthdayType}
+                  gender={iztrolabeData.gender}
+                  horoscopeDate={new Date()} // 新增参数，设置运限日期【可选，默认为当前时间】
+                  horoscopeHour={1} // 新增参数，设置流时时辰的索引【可选，默认会获取 horoscopeDate 时间】
+                  lang={iztroLang}
+                />
+              </motion.div>
             </div>
           ) : (
             <>
