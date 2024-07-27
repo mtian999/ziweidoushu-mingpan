@@ -235,7 +235,7 @@ export function IztroForm({
       });
 
       await new Promise((resolve) => {
-        setTimeout(resolve, 6000);
+        setTimeout(resolve, 4500);
       });
       setIztrolabeData({
         birthday: birthday as string,
