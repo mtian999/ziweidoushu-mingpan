@@ -289,7 +289,7 @@ export function IztroForm({
             boxSizing: "border-box",
           }}
           className={`${
-            iztrolabeData ? "overflow-x-auto" : ""
+            iztrolabeData ? "scroll-x-auto" : ""
           } relative min-h-[600px] w-auto text-black bg-white`}
         >
           {iztrolabeData ? (
@@ -298,6 +298,7 @@ export function IztroForm({
               style={{
                 padding: "15px",
                 borderRadius: "5px",
+                backgroundColor: "#fff",
                 boxSizing: "border-box",
               }}
               className="w-[1280px] md:w-full"

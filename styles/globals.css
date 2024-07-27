@@ -94,6 +94,10 @@ h6 {
   @apply text-base sm:text-xl md:text-xl text-slate-900 dark:text-gray-200 leading-[1.625] font-semibold mb-2
 }
 
+.scroll-x-auto {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 @keyframes rotate-forever {
   from {
     transform: rotate(0deg);
