@@ -331,7 +331,7 @@ export function IztroForm({
             <>
               <div className={`absolute w-full h-full overflow-hidden`}>
                 <div
-                  className={`w-full h-full opacity-15 ease-out duration-500 ${
+                  className={`w-full h-full opacity-30 ease-out duration-500 ${
                     isGenerating ? "scale-125" : ""
                   }`}
                 >
