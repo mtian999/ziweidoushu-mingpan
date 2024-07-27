@@ -291,7 +291,7 @@ export function IztroForm({
           }}
           className={`${
             iztrolabeData ? "overflow-x-auto" : ""
-          } relative min-h-[600px] w-full  text-black bg-white`}
+          } relative min-h-[600px] text-black bg-white`}
         >
           {iztrolabeData ? (
             <div
