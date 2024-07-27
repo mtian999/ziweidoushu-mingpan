@@ -93,3 +93,26 @@ h5 {
 h6 {
   @apply text-base sm:text-xl md:text-xl text-slate-900 dark:text-gray-200 leading-[1.625] font-semibold mb-2
 }
+
+@keyframes rotate-forever {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-anticlockwise-forever {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.rotate-forever {
+  animation: rotate-forever 90s linear infinite;
+}
+.rotate-anticlockwise-forever {
+  animation: rotate-anticlockwise-forever 90s linear infinite;
+}
