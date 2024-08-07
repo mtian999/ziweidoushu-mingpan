@@ -95,7 +95,11 @@ export function IztroForm({
 
     // 设置一个新的定时器
     const id = setTimeout(() => {
-      toBlob(ref.current as HTMLDivElement)
+      toBlob(ref.current as HTMLDivElement, {
+        cacheBust: true,
+        pixelRatio: 1,
+        quality: 1,
+      })
         .then((blob) => {
           // 处理blob，
           const currentTime = new Date().getTime();
