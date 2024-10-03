@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'ChillRoundGothic';
-  src: url('@/public/fonts/ChillRoundGothic_Light.otf') format('opentype');
+  src: url('/fonts/ChillRoundGothic_Light.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
