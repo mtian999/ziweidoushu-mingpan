@@ -2,6 +2,9 @@
 import { BASE_URL, DEV_BASE_URL, IS_DEV } from "@/lib/env";
 import { NextRequest, NextResponse } from "next/server";
 
+export const maxDuration = 60; // This function can run for a maximum of 60 seconds (update at 2024-05-09 form 10 seconds)
+export const dynamic = "force-dynamic";
+
 // 本地 Chrome 执行包路径
 const localExecutablePath =
   process.platform === "win32"
@@ -53,7 +56,8 @@ export async function POST(req: NextRequest) {
 
     // 访问Next.js页面
     await page.goto(
-      `${currentBaseUrl}/zwds-preview?birthday=${birthday}&birthTime=${birthTime}&gender=${gender}&lang=${lang}`
+      `${currentBaseUrl}/zwds-preview?birthday=${birthday}&birthTime=${birthTime}&gender=${gender}&lang=${lang}`,
+      { waitUntil: "networkidle0", timeout: 100000 }
     ); // 替换为你的页面路径
     // 等待页面渲染完成
     await page.waitForSelector("body"); // 替换为你页面中的选择器
