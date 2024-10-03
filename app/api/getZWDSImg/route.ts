@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
     // 访问Next.js页面
     await page.goto(
       `${currentBaseUrl}/zwds-preview?birthday=${birthday}&birthTime=${birthTime}&gender=${gender}&lang=${lang}`,
-      { waitUntil: "networkidle0", timeout: 100000 }
+      { timeout: 100000 }
     ); // 替换为你的页面路径
     // 等待页面渲染完成
     await page.waitForSelector("body"); // 替换为你页面中的选择器
