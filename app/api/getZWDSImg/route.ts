@@ -24,6 +24,11 @@ async function getBrowser() {
   // 引入依赖
   const chromium = require("@sparticuz/chromium-min");
   const puppeteer = require("puppeteer-core");
+  chromium.setHeadlessMode = true;
+  // Optional: Load any fonts you need. Open Sans is included by default in AWS Lambda instances
+  await chromium.font(
+    "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
+  );
 
   // 启动
   let browser = await puppeteer.launch({
