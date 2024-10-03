@@ -24,7 +24,6 @@ import {
 import dayjs from "dayjs";
 import { saveAs } from "file-saver";
 import { motion } from "framer-motion";
-import { toBlob } from "html-to-image";
 import { CHINESE_TIME, TIME_RANGE } from "iztro/lib/data";
 import { GenderName, setLanguage, t } from "iztro/lib/i18n";
 import { useTheme } from "next-themes";
@@ -83,68 +82,68 @@ export function IztroForm({
 
   const ref = useRef<HTMLDivElement>(null);
 
-  const onButtonClick = () => {
-    if (ref.current === null) {
-      return;
-    }
-    setDownloadiSloading(true);
-    // 清除之前的定时器
-    if (timerId) {
-      clearTimeout(timerId);
-    }
-
-    // 设置一个新的定时器
-    const id = setTimeout(() => {
-      toBlob(ref.current as HTMLDivElement, {
-        cacheBust: true,
-        pixelRatio: 1,
-        quality: 1,
-      })
-        .then((blob) => {
-          // 处理blob，
-          const currentTime = new Date().getTime();
-          if (window.saveAs) {
-            window.saveAs(blob as Blob, `zwds-${currentTime}.png`);
-          } else {
-            saveAs(blob as Blob, `zwds-${currentTime}.png`);
-          }
-        })
-        .catch((err) => {})
-        .finally(() => {
-          setDownloadiSloading(false);
-        });
-    }, 1000);
-
-    // 保存定时器的ID
-    setTimerId(id);
-  };
   // const onButtonClick = () => {
+  //   if (ref.current === null) {
+  //     return;
+  //   }
   //   setDownloadiSloading(true);
-  //   fetch(IS_DEV ? "/api/getZWDSImg" : "/api/getZWDSImgVercel", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json;charset=utf-8",
-  //     },
-  //     body: JSON.stringify({ birthday, birthTime, gender, lang: langName }),
-  //   })
-  //     .then((response) => {
-  //       return response.blob();
+  //   // 清除之前的定时器
+  //   if (timerId) {
+  //     clearTimeout(timerId);
+  //   }
+
+  //   // 设置一个新的定时器
+  //   const id = setTimeout(() => {
+  //     toBlob(ref.current as HTMLDivElement, {
+  //       cacheBust: true,
+  //       pixelRatio: 1,
+  //       quality: 1,
   //     })
-  //     .then((blob) => {
-  //       // 处理blob，例如创建一个URL并显示图片
-  //       const currentTime = new Date().getTime();
-  //       saveAs(blob, `zwds-${currentTime}.png`);
-  //     })
-  //     .catch(() => {
-  //       messageApi.open({
-  //         type: "error",
-  //         content: "图片下载失败",
+  //       .then((blob) => {
+  //         // 处理blob，
+  //         const currentTime = new Date().getTime();
+  //         if (window.saveAs) {
+  //           window.saveAs(blob as Blob, `zwds-${currentTime}.png`);
+  //         } else {
+  //           saveAs(blob as Blob, `zwds-${currentTime}.png`);
+  //         }
+  //       })
+  //       .catch((err) => {})
+  //       .finally(() => {
+  //         setDownloadiSloading(false);
   //       });
-  //     })
-  //     .finally(() => {
-  //       setDownloadiSloading(false);
-  //     });
+  //   }, 1000);
+
+  //   // 保存定时器的ID
+  //   setTimerId(id);
   // };
+  const onButtonClick = () => {
+    setDownloadiSloading(true);
+    fetch("/api/getZWDSImg", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify({ birthday, birthTime, gender, lang: langName }),
+    })
+      .then((response) => {
+        return response.blob();
+      })
+      .then((blob) => {
+        // 处理blob，例如创建一个URL并显示图片
+        const currentTime = new Date().getTime();
+        saveAs(blob, `zwds-${currentTime}.png`);
+      })
+      .catch(() => {
+        messageApi.open({
+          type: "error",
+          content: "图片下载失败",
+        });
+      })
+      .finally(() => {
+        setDownloadiSloading(false);
+      });
+  };
   const [form] = Form.useForm();
 
   const dataPlaceholder = `example ${new Date().getFullYear()}0101`;

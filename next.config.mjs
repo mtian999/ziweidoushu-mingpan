@@ -4,6 +4,12 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    serverComponentsExternalPackages: [
+      "puppeteer-core",
+      "@sparticuz/chromium-min",
+    ],
+  },
   webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.svg$/,

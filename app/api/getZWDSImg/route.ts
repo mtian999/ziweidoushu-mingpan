@@ -1,10 +1,38 @@
 /* eslint-disable import/prefer-default-export */
 import { BASE_URL, DEV_BASE_URL, IS_DEV } from "@/lib/env";
 import { NextRequest, NextResponse } from "next/server";
-import puppeteer from "puppeteer";
+
+// 本地 Chrome 执行包路径
+const localExecutablePath =
+  process.platform === "win32"
+    ? "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    : process.platform === "linux"
+    ? "/usr/bin/google-chrome"
+    : "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
+
+// 远程执行包
+const remoteExecutablePath =
+  "https://github.com/Sparticuz/chromium/releases/download/v119.0.2/chromium-v119.0.2-pack.tar";
+
+// 运行环境
+const isDev = process.env.NODE_ENV === "development";
 
 async function getBrowser() {
-  return await puppeteer.launch();
+  // 引入依赖
+  const chromium = require("@sparticuz/chromium-min");
+  const puppeteer = require("puppeteer-core");
+
+  // 启动
+  let browser = await puppeteer.launch({
+    args: isDev ? [] : chromium.args,
+    defaultViewport: { width: 1920, height: 1080 },
+    executablePath: isDev
+      ? localExecutablePath
+      : await chromium.executablePath(remoteExecutablePath),
+    headless: chromium.headless,
+  });
+
+  return browser;
 }
 
 export async function POST(req: NextRequest) {
