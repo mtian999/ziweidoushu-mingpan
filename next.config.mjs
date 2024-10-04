@@ -12,7 +12,8 @@ const nextConfig = {
           { key: "Access-Control-Allow-Credentials", value: "true" },
           {
             key: "Access-Control-Allow-Origin",
-            value: "https://fate.mastermao.com",
+            // value: "https://fate.mastermao.com",
+            value: "*",
           }, // 或者指定具体的来源，如 'https://example.com'
           { key: "Access-Control-Allow-Methods", value: "GET,OPTIONS" },
           {
