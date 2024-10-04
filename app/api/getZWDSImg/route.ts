@@ -1,10 +1,15 @@
 /* eslint-disable import/prefer-default-export */
 import { BASE_URL, DEV_BASE_URL, IS_DEV } from "@/lib/env";
 import { NextRequest, NextResponse } from "next/server";
+import sharp from "sharp";
+// 引入依赖
+const chromium = require("@sparticuz/chromium-min");
+const puppeteer = require("puppeteer-core");
 
 export const maxDuration = 60; // This function can run for a maximum of 60 seconds (update at 2024-05-09 form 10 seconds)
 export const dynamic = "force-dynamic";
 
+let browser: any = null;
 // 本地 Chrome 执行包路径
 const localExecutablePath =
   process.platform === "win32"
@@ -21,28 +26,34 @@ const remoteExecutablePath =
 const isDev = process.env.NODE_ENV === "development";
 
 async function getBrowser() {
-  // 引入依赖
-  const chromium = require("@sparticuz/chromium-min");
-  const puppeteer = require("puppeteer-core");
-  chromium.setHeadlessMode = true;
-  // Optional: Load any fonts you need. Open Sans is included by default in AWS Lambda instances
-  // try {
-  //   await chromium.font(
-  //     "https://img.maomaoyu.coffee/fonts/NotoSansTC-Light.ttf"
-  //   );
-  // } catch (error) {
-  //   console.error("error", error);
-  // }
+  if (!browser) {
+    chromium.setHeadlessMode = true;
+    // Optional: Load any fonts you need. Open Sans is included by default in AWS Lambda instances
+    // try {
+    //   await chromium.font(
+    //     "https://img.maomaoyu.coffee/fonts/NotoSansTC-Light.ttf"
+    //   );
+    // } catch (error) {
+    //   console.error("error", error);
+    // }
 
-  // 启动
-  let browser = await puppeteer.launch({
-    args: isDev ? [] : chromium.args,
-    defaultViewport: { width: 1920, height: 1080 },
-    executablePath: isDev
-      ? localExecutablePath
-      : await chromium.executablePath(remoteExecutablePath),
-    headless: chromium.headless,
-  });
+    // 启动
+    browser = await puppeteer.launch({
+      args: isDev ? [] : chromium.args,
+      defaultViewport: { width: 1920, height: 1080 },
+      executablePath: isDev
+        ? localExecutablePath
+        : await chromium.executablePath(remoteExecutablePath),
+      headless: chromium.headless,
+    });
+    browser.on("disconnected", () => {
+      console.log("浏览器断开连接");
+      //断开后设为 falsy 值
+      browser = null;
+    });
+  } else {
+    console.log("浏览器已经打开，不需要重新打开");
+  }
 
   return browser;
 }
@@ -91,14 +102,16 @@ export async function POST(req: NextRequest) {
         height: box.height,
       },
     });
-
+    const webpBuffer = await sharp(screenshotBuffer).webp().toBuffer();
     // 关闭浏览器
-    await browser.close();
+    if (isDev) {
+      await browser.close();
+    }
     // 设置响应头
     const headers = new Headers();
-    headers.append("Content-Type", "image/png");
+    headers.append("Content-Type", "image/webp");
 
-    return new Response(screenshotBuffer, {
+    return new Response(webpBuffer, {
       headers,
     });
   } catch (error) {
