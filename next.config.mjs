@@ -15,7 +15,7 @@ const nextConfig = {
             // value: "https://fate.mastermao.com",
             value: "*",
           }, // 或者指定具体的来源，如 'https://example.com'
-          { key: "Access-Control-Allow-Methods", value: "GET,OPTIONS" },
+          { key: "Access-Control-Allow-Methods", value: "GET,POST,OPTIONS" },
           {
             key: "Access-Control-Allow-Headers",
             value:
