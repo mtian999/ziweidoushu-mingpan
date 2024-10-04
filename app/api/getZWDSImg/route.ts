@@ -110,13 +110,6 @@ export async function POST(req: NextRequest) {
     // 设置响应头
     const headers = new Headers();
     headers.append("Content-Type", "image/webp");
-    // 设置 CORS 头
-    headers.append("Access-Control-Allow-Origin", "*");
-    headers.append("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-    headers.append(
-      "Access-Control-Allow-Headers",
-      "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-    );
 
     return new Response(webpBuffer, {
       headers,
