@@ -1,17 +1,5 @@
-@font-face {
-  font-family: 'ChillRoundGothic';
-  src: url('/fonts/ChillRoundGothic_Light.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-/* @font-face {
-  font-family: 'NotoSansTC';
-  src: url('/fonts/NotoSansTC-Light.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}  */
 .iztro-astrolabe {
-  font-family:'ChillRoundGothic',-apple-system,,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-family:-apple-system,,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   display: grid;
   position: relative;
   width: 100%;

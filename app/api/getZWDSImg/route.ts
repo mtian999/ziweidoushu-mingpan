@@ -1,7 +1,24 @@
 /* eslint-disable import/prefer-default-export */
 import { BASE_URL, DEV_BASE_URL, IS_DEV } from "@/lib/env";
+import Cors from "cors";
 import { NextRequest, NextResponse } from "next/server";
 import sharp from "sharp";
+
+const cors = Cors({
+  origin: "https://fate.mastermao.com", // 允许的来源
+  optionsSuccessStatus: 200,
+});
+// 创建一个中间件函数
+const runCors = (req: any, res: any) => {
+  return new Promise((resolve, reject) => {
+    cors(req, res, (result) => {
+      if (result instanceof Error) {
+        return reject(result);
+      }
+      return resolve(result);
+    });
+  });
+};
 // 引入依赖
 const chromium = require("@sparticuz/chromium-min");
 const puppeteer = require("puppeteer-core");
@@ -58,8 +75,9 @@ async function getBrowser() {
   return browser;
 }
 
-export async function POST(req: NextRequest) {
+export async function POST(req: NextRequest, res: NextResponse) {
   try {
+    await runCors(req, res);
     const browser = await getBrowser();
     // 启动浏览器
     // const browser = await puppeteer.launch();

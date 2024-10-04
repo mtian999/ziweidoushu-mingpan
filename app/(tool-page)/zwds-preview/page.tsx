@@ -2,6 +2,7 @@ import { IztroPreview } from "@/components/IztroPreview";
 import { defaultLocale, localesDict } from "@/lib/i18n";
 import type { GenderName } from "iztro/lib/i18n";
 import { setLanguage } from "iztro/lib/i18n";
+import "./page.css";
 
 export default async function Page({
   searchParams: { birthday, birthTime, gender, lang },
