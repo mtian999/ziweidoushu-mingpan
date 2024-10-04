@@ -24,6 +24,7 @@ import {
 import dayjs from "dayjs";
 import { saveAs } from "file-saver";
 import { motion } from "framer-motion";
+import { toBlob } from "html-to-image";
 import { CHINESE_TIME, TIME_RANGE } from "iztro/lib/data";
 import { GenderName, setLanguage, t } from "iztro/lib/i18n";
 import { useTheme } from "next-themes";
@@ -34,6 +35,8 @@ type AnimateInfoType = {
   scale: number;
   rotateDuration: string;
 };
+// 运行环境
+const isDev = process.env.NODE_ENV === "development";
 
 export function IztroForm({
   localeDict,
@@ -82,42 +85,42 @@ export function IztroForm({
 
   const ref = useRef<HTMLDivElement>(null);
 
-  // const onButtonClick = () => {
-  //   if (ref.current === null) {
-  //     return;
-  //   }
-  //   setDownloadiSloading(true);
-  //   // 清除之前的定时器
-  //   if (timerId) {
-  //     clearTimeout(timerId);
-  //   }
+  const localDownloadHandle = () => {
+    if (ref.current === null) {
+      return;
+    }
+    setDownloadiSloading(true);
+    // 清除之前的定时器
+    if (timerId) {
+      clearTimeout(timerId);
+    }
 
-  //   // 设置一个新的定时器
-  //   const id = setTimeout(() => {
-  //     toBlob(ref.current as HTMLDivElement, {
-  //       cacheBust: true,
-  //       pixelRatio: 1,
-  //       quality: 1,
-  //     })
-  //       .then((blob) => {
-  //         // 处理blob，
-  //         const currentTime = new Date().getTime();
-  //         if (window.saveAs) {
-  //           window.saveAs(blob as Blob, `zwds-${currentTime}.png`);
-  //         } else {
-  //           saveAs(blob as Blob, `zwds-${currentTime}.png`);
-  //         }
-  //       })
-  //       .catch((err) => {})
-  //       .finally(() => {
-  //         setDownloadiSloading(false);
-  //       });
-  //   }, 1000);
+    // 设置一个新的定时器
+    const id = setTimeout(() => {
+      toBlob(ref.current as HTMLDivElement, {
+        cacheBust: true,
+        pixelRatio: 1,
+        quality: 1,
+      })
+        .then((blob) => {
+          // 处理blob，
+          const currentTime = new Date().getTime();
+          if (window.saveAs) {
+            window.saveAs(blob as Blob, `zwds-${currentTime}.png`);
+          } else {
+            saveAs(blob as Blob, `zwds-${currentTime}.png`);
+          }
+        })
+        .catch((err) => {})
+        .finally(() => {
+          setDownloadiSloading(false);
+        });
+    }, 1000);
 
-  //   // 保存定时器的ID
-  //   setTimerId(id);
-  // };
-  const onButtonClick = () => {
+    // 保存定时器的ID
+    setTimerId(id);
+  };
+  const remoteDownloadHandle = () => {
     setDownloadiSloading(true);
     fetch("/api/getZWDSImg", {
       method: "POST",
@@ -143,6 +146,13 @@ export function IztroForm({
       .finally(() => {
         setDownloadiSloading(false);
       });
+  };
+  const onButtonClick = () => {
+    if (isDev) {
+      remoteDownloadHandle();
+    } else {
+      localDownloadHandle();
+    }
   };
   const [form] = Form.useForm();
 
