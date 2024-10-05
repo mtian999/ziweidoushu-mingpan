@@ -22,6 +22,7 @@ export default async function Page({
 
   return (
     <IztroPreview
+      className="iztrolabe-page"
       iztroData={{
         birthday,
         birthTime: birthTimeNum,

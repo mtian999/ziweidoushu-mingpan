@@ -8,9 +8,11 @@ import { setLanguage } from "iztro/lib/i18n";
 export function IztroPreview({
   iztroData,
   lang,
+  className,
 }: {
   iztroData: IztroInput;
   lang: string;
+  className?: string;
 }) {
   let langName = lang !== "" ? lang : defaultLocale;
   const iztroLang = localesDict[langName];
@@ -18,7 +20,7 @@ export function IztroPreview({
 
   return (
     <div
-      className="iztrolabe-container"
+      className={`${className} iztrolabe-container`}
       style={{
         width: "100%",
         height: "100vh",
