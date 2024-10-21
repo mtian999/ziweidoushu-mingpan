@@ -75,6 +75,7 @@ export async function POST(req: NextRequest) {
     const currentBaseUrl = IS_DEV ? DEV_BASE_URL : BASE_URL;
 
     // 访问Next.js页面
+    // /zwds-preview?birthday=2024-10-09&birthTime=1&gender=女&lang=zh
     await page.goto(
       `${currentBaseUrl}/zwds-preview?birthday=${birthday}&birthTime=${birthTime}&gender=${gender}&lang=${lang}`,
       { timeout: 100000 }

@@ -58,7 +58,7 @@
   justify-content: center;
   display: flex;
   gap: 3px;
-  height: 17px;
+  height: calc(var(--iztro-star-font-size-small) + 5px);
 }
 
 .iztro-palace-fate .iztro-palace-decadal-active {
