@@ -40,7 +40,7 @@
     "doYouLike": "",
     "description": "حاليًا، نوفر فقط خدمة توليد رسم Zi Wei Dou Shu مجاني."
   },
-  "CTAButton": { "title": "توليد" },
+  "CTAButton": { "title": "توليد", "title_2": "تحليل القدر" },
   "WallOfLove": {
     "title": "جدار الحب",
     "description1": "إذا استخدمت القالب المقصود هذا ونصحت به على تويتر،",

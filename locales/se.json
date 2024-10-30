@@ -77,7 +77,8 @@
     "description6": ""
   },
   "CTAButton": {
-    "title": "Zi Wei Dou Shu skapa ödesplan"
+    "title": "Zi Wei Dou Shu skapa ödesplan",
+    "title_2": "Analysera ödet"
   },
   "NotFound": {
     "title": "404 Not Found",

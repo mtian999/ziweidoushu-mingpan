@@ -77,7 +77,8 @@
     "description6": ""
   },
   "CTAButton": {
-    "title": "Affichage du disque de Zi Wei"
+    "title": "Affichage du disque de Zi Wei",
+    "title_2": "Analyser le Destin"
   },
   "NotFound": {
     "title": "404 Non Trouvé",

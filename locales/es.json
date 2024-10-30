@@ -40,7 +40,7 @@
     "doYouLike": "",
     "description": "Actualmente, solo proporcionamos el servicio de generación gratuita del gráfico de destino Zi Wei Dou Shu."
   },
-  "CTAButton": { "title": "Generar" },
+  "CTAButton": { "title": "Generar", "title_2": "Analizar el Destino" },
   "WallOfLove": {
     "title": "Muro de Amor",
     "description1": "Si utilizas esta plantilla de página de destino y la recomendas en Twitter,",

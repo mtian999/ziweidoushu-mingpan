@@ -32,13 +32,13 @@ const Hero = ({
           <h1>
             {locale.title1} <LineText>{locale.title2}</LineText> {locale.title3}
           </h1>
+          <CTAButton locale={CTALocale} langName={langName}></CTAButton>
           <h2 className="mx-auto mt-6 max-w-2xl text-2xl tracking-tight text-slate-700 dark:text-slate-400">
             {/* {siteConfig.description} */}
             {locale.description}
           </h2>
         </section>
       </motion.div>
-      <CTAButton locale={CTALocale} langName={langName}></CTAButton>
     </>
   );
 };

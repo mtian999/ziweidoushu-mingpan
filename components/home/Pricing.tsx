@@ -15,7 +15,6 @@ import { siteConfig } from "@/config/site";
 import { ALL_TIERS } from "@/config/tiers";
 import { TiersEnum } from "@/types/pricing";
 import { FaCheck } from "react-icons/fa";
-import { MdOutlineTimelapse } from "react-icons/md";
 import { RoughNotation } from "react-rough-notation";
 
 const Pricing = ({
@@ -69,7 +68,8 @@ const Pricing = ({
                     {TiersEnum.Free === tier.key ? (
                       <FaCheck className="text-blue-500" />
                     ) : (
-                      <MdOutlineTimelapse color="#9370DB" />
+                      // <MdOutlineTimelapse color="#9370DB" />
+                      <FaCheck className="text-blue-500" />
                     )}
                     <p className="text-default-500">{feature}</p>
                   </li>
@@ -81,7 +81,7 @@ const Pricing = ({
                 fullWidth
                 as={Link}
                 color={tier.buttonColor}
-                href={`/${langName}/fate`}
+                href="https://fate.mastermao.com"
                 variant={tier.buttonVariant}
                 // rel="noopener noreferrer nofollow"
               >

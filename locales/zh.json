@@ -78,7 +78,8 @@
     "description6": ""
   },
   "CTAButton": {
-    "title": "紫薇排盘"
+    "title": "紫薇排盘",
+    "title_2": "开始解盘"
   },
   "NotFound": {
     "title": "404 未找到",

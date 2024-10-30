@@ -77,7 +77,8 @@
     "description6": ""
   },
   "CTAButton": {
-    "title": "Gerar Gráfico de Destino do Zi Wei Dou Shu"
+    "title": "Gerar Gráfico de Destino do Zi Wei Dou Shu",
+    "title_2": "Analisar o Destino"
   },
   "NotFound": {
     "title": "404 Não Encontrado",

@@ -40,7 +40,7 @@
     "doYouLike": "",
     "description": "Currently, we only provide free Zi Wei Dou Shu destiny chart generation service."
   },
-  "CTAButton": { "title": "Generate" },
+  "CTAButton": { "title": "Generate", "title_2": "Analyze Destiny" },
   "WallOfLove": {
     "title": "Wall of Love",
     "description1": "If you use this landing page template and recommend it on Twitter,",

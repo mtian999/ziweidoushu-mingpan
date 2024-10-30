@@ -38,7 +38,7 @@
     "doYouLike": "",
     "description": "目前只提供免費的紫微斗數命盤生成服務"
   },
-  "CTAButton": { "title": "紫薇排盤" },
+  "CTAButton": { "title": "紫薇排盤", "title_2": "開始解盤" },
   "WallOfLove": {
     "title": "Wall of Love",
     "description1": "如果你使用這個落地頁模板並在推特上推薦了，",
